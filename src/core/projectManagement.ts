@@ -1,11 +1,13 @@
 import { Sprint } from "./sprint";
 
 export class ProjectManagement {
-    private sprint: Sprint[] = [];
+    private sprints: Sprint[] = [];
 
     constructor(sprint: Sprint) { 
-        this.sprint.push(sprint);
+        this.sprints.push(sprint);
     }
 
-
+    getSprints(): Sprint[] { 
+        return this.sprints
+    }
 }

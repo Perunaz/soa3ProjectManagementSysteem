@@ -7,7 +7,7 @@ export class Project {
         this.projectManagement = projectManagement;
     }
 
-    printProject() {
-        console.log(this.projectManagement)
+    getprojectManagement(): ProjectManagement { 
+        return this.projectManagement;
     }
 }
