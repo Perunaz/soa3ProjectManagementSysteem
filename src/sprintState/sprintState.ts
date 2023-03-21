@@ -1,4 +1,4 @@
-export interface sprintState {
+export interface SprintState {
         isReviewable: boolean;
 
     addSprint(): void;

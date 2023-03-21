@@ -1,10 +1,13 @@
-import { sprintState } from "../sprintState";
+import { Sprint } from "../../core/sprint";
+import { SprintState } from "../sprintState";
 
-export class createdSprintState implements sprintState {
+export class InProgressSprintState implements SprintState {
     isReviewable: boolean;
+    private state: Sprint;
 
-    constructor(isReviewable: boolean) { 
-        this.isReviewable = isReviewable;
+    constructor(_state: Sprint) {  
+        this.state = _state;
+
     }
 
     addSprint(): void {
