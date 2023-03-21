@@ -14,3 +14,11 @@ test("should have sprint inside project", () => {
 
 	expect(sprints.length).toBe(1); 
 });
+
+test("should change sprint state (WIP)", () => { 
+	let reportExportStrategy = new ExportReportToPNG();
+	let sprint = new Sprint("Sprint1", reportExportStrategy);
+	sprint.setState(sprint.getInProgressSprintState())
+
+	expect(sprint.getState()).toBe(sprint.getInProgressSprintState()); 
+});
