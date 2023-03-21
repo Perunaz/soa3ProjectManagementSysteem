@@ -12,5 +12,5 @@ test("should have sprint inside project", () => {
 	let projectManagement2 = project.getprojectManagement();
 	let sprints = projectManagement2.getSprints();
 
-	expect(sprints.length).toBe(1);
+	expect(sprints.length).toBe(1); 
 });
