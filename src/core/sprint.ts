@@ -4,7 +4,7 @@ import { InProgressSprintState } from "../sprintState/states/inProgressSprintSta
 import { ReviewedSprintState } from "../sprintState/states/reviewedSprintState";
 import { CreatedSprintState } from "../sprintState/states/createdSprintState";
 import { CancelledSprintState } from "../sprintState/states/cancelledSprintState";
-import { ReportExportStrategy } from "../reportExportStrategy/reportExportStrategy";
+import { ExportReportStrategy } from "../reportExportStrategy/exportReportStrategy";
 
 export class Sprint {
     private createdSprintState: SprintState;
@@ -16,9 +16,9 @@ export class Sprint {
     private _state: SprintState;
 
     private name: string;
-    private reportExportStrategy: ReportExportStrategy;
+    private reportExportStrategy: ExportReportStrategy;
 
-    constructor(name: string, reportExportStrategy: ReportExportStrategy) { 
+    constructor(name: string, reportExportStrategy: ExportReportStrategy) { 
         this.createdSprintState = new CreatedSprintState(this);
         this.inProgressSprintState = new InProgressSprintState(this);
         this.finishedSprintState = new FinishedSprintState(this);

@@ -1,7 +1,7 @@
 import { Sprint } from "../core/sprint";
-import { ReportExportStrategy } from "./reportExportStrategy";
+import { ExportReportStrategy } from "./exportReportStrategy";
 
-export class ExportReportToPDF implements ReportExportStrategy {
+export class ExportReportToPDF implements ExportReportStrategy {
     exportReport(sprint: Sprint): void {
         throw new Error("Method not implemented.");
     }
