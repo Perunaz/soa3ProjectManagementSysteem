@@ -3,11 +3,11 @@ import { Sprint } from "../../core/sprint";
 
 export class CreatedSprintState implements SprintState {
     isReviewable: boolean;
-    private state: Sprint;
+    sprint: Sprint;
 
-    constructor(_state: Sprint) {  
-        this.state = _state;
-
+    constructor(_sprint: Sprint) {  
+        this.sprint = _sprint;
+        this.isReviewable = false;
     }
 
     addSprint(): void {

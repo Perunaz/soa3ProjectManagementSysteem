@@ -1,5 +1,8 @@
+import { Sprint } from "../core/sprint";
+
 export interface SprintState {
-        isReviewable: boolean;
+    isReviewable: boolean;
+    sprint: Sprint;
 
     addSprint(): void;
 
@@ -7,5 +10,5 @@ export interface SprintState {
 
     editSprint(): void;
 
-     deleteSprint(): void;
+    deleteSprint(): void;
 }
