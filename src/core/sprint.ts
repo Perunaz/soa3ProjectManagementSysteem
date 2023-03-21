@@ -30,4 +30,32 @@ export class Sprint {
         this.name = name;
         this.reportExportStrategy = reportExportStrategy;
     }
+
+    public setState(state: SprintState): void {
+		this._state = state;
+	}
+
+    public getState(): SprintState { 
+        return this._state;
+    }
+
+    public getCreatedSprintState(): CreatedSprintState { 
+        return this.createdSprintState;
+    }
+
+    public getInProgressSprintState(): InProgressSprintState {
+        return this.inProgressSprintState;
+    }
+
+    public getFinishedSprintState(): FinishedSprintState {
+        return this.finishedSprintState;
+    }
+
+    public getReviewedSprintState(): ReviewedSprintState {
+        return this.reviewedSprintState;
+    }
+
+    public getCancelledSprintState(): CancelledSprintState {
+        return this.cancelledSprintState;
+    }
 }

@@ -1,10 +1,10 @@
 import { Project } from "../src/core/project";
 import { ProjectManagement } from "../src/core/projectManagement";
 import { Sprint } from "../src/core/sprint";
-import { ExportReportToPDF } from "../src/ReportExportStrategy/exportReportToPDF";
+import { ExportReportToPNG } from "../src/reportExportStrategy/exportReportToPNG";
 
 test("should have sprint inside project", () => {
-	let reportExportStrategy = new ExportReportToPDF();
+	let reportExportStrategy = new ExportReportToPNG();
 	let sprint = new Sprint("Sprint1", reportExportStrategy);
 	let projectManagement = new ProjectManagement(sprint);
 	let project = new Project(projectManagement);
@@ -12,5 +12,13 @@ test("should have sprint inside project", () => {
 	let projectManagement2 = project.getprojectManagement();
 	let sprints = projectManagement2.getSprints();
 
-	expect(sprints.length).toBe(1);
+	expect(sprints.length).toBe(1); 
+});
+
+test("should change sprint state (WIP)", () => { 
+	let reportExportStrategy = new ExportReportToPNG();
+	let sprint = new Sprint("Sprint1", reportExportStrategy);
+	sprint.setState(sprint.getInProgressSprintState())
+
+	expect(sprint.getState()).toBe(sprint.getInProgressSprintState()); 
 });
