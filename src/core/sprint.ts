@@ -4,7 +4,7 @@ import { InProgressSprintState } from "../sprintState/states/inProgressSprintSta
 import { ReviewedSprintState } from "../sprintState/states/reviewedSprintState";
 import { CreatedSprintState } from "../sprintState/states/createdSprintState";
 import { CancelledSprintState } from "../sprintState/states/cancelledSprintState";
-import { ReportExportStrategy } from "../ReportExportStrategy/reportExportStrategy";
+import { ReportExportStrategy } from "../reportExportStrategy/reportExportStrategy";
 
 export class Sprint {
     private createdSprintState: SprintState;
