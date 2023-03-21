@@ -7,7 +7,7 @@ export class InProgressSprintState implements SprintState {
 
     constructor(_state: Sprint) {  
         this.state = _state;
-
+        this.isReviewable = false;
     }
 
     addSprint(): void {

@@ -1,7 +1,7 @@
 import { Project } from "../src/core/project";
 import { ProjectManagement } from "../src/core/projectManagement";
 import { Sprint } from "../src/core/sprint";
-import { ExportReportToPDF } from "../src/ReportExportStrategy/exportReportToPDF";
+import { ExportReportToPDF } from "../src/reportExportStrategy/exportReportToPDF";
 
 test("should have sprint inside project", () => {
 	let reportExportStrategy = new ExportReportToPDF();
