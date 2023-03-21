@@ -1,25 +1,28 @@
-import { Item } from "../item";
-import { ItemState } from "../itemState";
+import { Item } from "../../core/item";
+import { ItemState } from "./itemState";
 
-export class TestedItemState implements ItemState {
+export class TodoItemState implements ItemState {
     isReviewable: boolean;
-    private state: Item;
+    item: Item;
 
-    constructor(_state: Item) {  
-        this.state = _state;
-
+    constructor(item: Item) {  
+        this.item = item;
+        this.isReviewable = false
     }
+
     addItem(): void {
         throw new Error("Method not implemented.");
     }
+
     removeItem(): void {
         throw new Error("Method not implemented.");
     }
+
     editItem(): void {
         throw new Error("Method not implemented.");
     }
+
     deleteItem(): void {
         throw new Error("Method not implemented.");
     }
-
 }

@@ -1,9 +1,9 @@
-import { ItemState } from "./itemState";
-import { DoingItemState } from "./states/doingItemState";
-import { DoneItemState } from "./states/doneItemState";
-import { ReadyForTestingItemState } from "./states/readyForTestingItemState";
-import { TestingItemState } from "./states/testingItemState";
-import { TodoItemState } from "./states/todoItemState";
+import { ItemState } from "../states/itemStates/itemState";
+import { DoingItemState } from "../states/itemStates/doingItemState";
+import { DoneItemState } from "../states/itemStates/doneItemState";
+import { ReadyForTestingItemState } from "../states/itemStates/readyForTestingItemState";
+import { TestingItemState } from "../states/itemStates/testingItemState";
+import { TodoItemState } from "../states/itemStates/todoItemState";
 
 export class Item{
     private todoItemState: ItemState;
@@ -17,7 +17,7 @@ export class Item{
     private id: number;
     private developerId: number;
 
-    constructor() { 
+    constructor(id: number, developerId: number) { 
         this.todoItemState = new TodoItemState(this);
         this.doingItemState = new DoingItemState(this);
         this.readyForTestingItemState = new ReadyForTestingItemState(this);
@@ -26,6 +26,8 @@ export class Item{
 
         this._state = this.todoItemState;
 
+        this.id = id;
+        this.developerId = developerId;
     }
 
     public createActivity(): void {

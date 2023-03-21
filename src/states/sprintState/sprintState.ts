@@ -1,4 +1,4 @@
-import { Sprint } from "../core/sprint";
+import { Sprint } from "../../core/sprint";
 
 export interface SprintState {
     isReviewable: boolean;

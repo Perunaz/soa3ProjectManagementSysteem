@@ -1,8 +1,11 @@
-import { Item } from "../item/item";
+import { Item } from "./item";
 
-export class backlog{
-    private developerId: number;
-    private item: Item;
+export class Backlog{
+    private item: Item[];
+
+    constructor() {
+        this.item = [];
+    }
 
     public createActivity(): void {
         throw new Error("Method not implemented.");

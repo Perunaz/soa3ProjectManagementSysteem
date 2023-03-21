@@ -1,7 +1,7 @@
 import { Sprint } from "../../core/sprint";
-import { SprintState } from "../sprintState";
+import { SprintState } from "./sprintState";
 
-export class ReviewedSprintState implements SprintState {
+export class CreatedSprintState implements SprintState {
     isReviewable: boolean;
     sprint: Sprint;
 

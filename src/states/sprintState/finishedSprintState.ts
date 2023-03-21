@@ -1,5 +1,5 @@
 import { Sprint } from "../../core/sprint";
-import { SprintState } from "../sprintState";
+import { SprintState } from "./sprintState";
 
 export class FinishedSprintState implements SprintState {
     isReviewable: boolean;
