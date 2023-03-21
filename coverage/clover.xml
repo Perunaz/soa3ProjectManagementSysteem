@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1679419429697" clover="3.2.0">
-  <project timestamp="1679419429697" name="All files">
+<coverage generated="1679419872007" clover="3.2.0">
+  <project timestamp="1679419872007" name="All files">
     <metrics statements="58" coveredstatements="37" conditionals="0" coveredconditionals="0" methods="31" coveredmethods="10" elements="89" coveredelements="47" complexity="0" loc="58" ncloc="58" packages="3" files="9" classes="9"/>
     <package name="core">
       <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
@@ -39,8 +39,8 @@
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <file name="exportReportToPDF.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\reportExportStrategy\exportReportToPDF.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
       </file>
     </package>
     <package name="sprintState.states">
