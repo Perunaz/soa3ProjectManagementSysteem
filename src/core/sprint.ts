@@ -52,7 +52,7 @@ export class Sprint {
 
     public setState(state: SprintState): void {
 		this._state = state;
-	}
+    }
 
     public getState(): SprintState { 
         return this._state;
