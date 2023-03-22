@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.53% </span>
+                <span class="strong">81.81% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/26</span>
+                <span class='fraction'>18/22</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.66% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/12</span>
+                <span class='fraction'>4/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.53% </span>
+                <span class="strong">81.81% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>16/26</span>
+                <span class='fraction'>18/22</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -126,23 +126,7 @@
 <a name='L61'></a><a href='#L61'>61</a>
 <a name='L62'></a><a href='#L62'>62</a>
 <a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a>
-<a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a>
-<a name='L70'></a><a href='#L70'>70</a>
-<a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a>
-<a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a>
-<a name='L77'></a><a href='#L77'>77</a>
-<a name='L78'></a><a href='#L78'>78</a>
-<a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L64'></a><a href='#L64'>64</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -183,7 +167,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -191,23 +175,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -257,36 +225,20 @@ export class Sprint {
         this.reportExportStrategy = reportExportStrategy;
     }
 &nbsp;
-    public addSprint(): void {
-        this._state.addSprint();
-    }
-&nbsp;
-    public <span class="fstat-no" title="function not covered" >removeSprint(</span>): void {
-<span class="cstat-no" title="statement not covered" >        this._state.removeSprint();</span>
-    }
-&nbsp;
-    public <span class="fstat-no" title="function not covered" >editSprint(</span>): void {
-<span class="cstat-no" title="statement not covered" >        this._state.editSprint();</span>
-    }
-&nbsp;
-    public <span class="fstat-no" title="function not covered" >deleteSprint(</span>): void {
-<span class="cstat-no" title="statement not covered" >        this._state.deleteSprint();</span>
-    }
-&nbsp;
-    public <span class="fstat-no" title="function not covered" >setState(</span>state: SprintState): void {
-<span class="cstat-no" title="statement not covered" >		this._state = state;</span>
+    public setState(state: SprintState): void {
+		this._state = state;
 	}
 &nbsp;
-    public <span class="fstat-no" title="function not covered" >getState(</span>): SprintState { 
-<span class="cstat-no" title="statement not covered" >        return this._state;</span>
+    public getState(): SprintState { 
+        return this._state;
     }
 &nbsp;
     public <span class="fstat-no" title="function not covered" >getCreatedSprintState(</span>): CreatedSprintState { 
 <span class="cstat-no" title="statement not covered" >        return this.createdSprintState;</span>
     }
 &nbsp;
-    public <span class="fstat-no" title="function not covered" >getInProgressSprintState(</span>): InProgressSprintState {
-<span class="cstat-no" title="statement not covered" >        return this.inProgressSprintState;</span>
+    public getInProgressSprintState(): InProgressSprintState {
+        return this.inProgressSprintState;
     }
 &nbsp;
     public <span class="fstat-no" title="function not covered" >getFinishedSprintState(</span>): FinishedSprintState {
@@ -307,7 +259,7 @@ export class Sprint {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-22T08:36:48.455Z
+                at 2023-03-21T18:27:07.405Z
             </div>
         <script src="../prettify.js"></script>
         <script>

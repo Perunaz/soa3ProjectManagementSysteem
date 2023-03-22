@@ -34,22 +34,6 @@ export class Sprint {
         this.reportExportStrategy = reportExportStrategy;
     }
 
-    public addSprint(): void {
-        this._state.addSprint();
-    }
-
-    public removeSprint(): void {
-        this._state.removeSprint();
-    }
-
-    public editSprint(): void {
-        this._state.editSprint();
-    }
-
-    public deleteSprint(): void {
-        this._state.deleteSprint();
-    }
-
     public setState(state: SprintState): void {
 		this._state = state;
 	}
