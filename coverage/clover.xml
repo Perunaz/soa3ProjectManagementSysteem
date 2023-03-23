@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1679474768617" clover="3.2.0">
-  <project timestamp="1679474768617" name="All files">
-    <metrics statements="69" coveredstatements="43" conditionals="0" coveredconditionals="0" methods="40" coveredmethods="14" elements="109" coveredelements="57" complexity="0" loc="69" ncloc="69" packages="3" files="10" classes="10"/>
+<coverage generated="1679580690980" clover="3.2.0">
+  <project timestamp="1679580690980" name="All files">
+    <metrics statements="74" coveredstatements="43" conditionals="0" coveredconditionals="0" methods="45" coveredmethods="14" elements="119" coveredelements="57" complexity="0" loc="74" ncloc="74" packages="3" files="10" classes="10"/>
     <package name="core">
-      <metrics statements="32" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="9"/>
+      <metrics statements="37" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="9"/>
       <file name="backlog.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\core\backlog.ts">
-        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
       </file>
       <file name="project.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\core\project.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
@@ -24,7 +25,7 @@
         <line num="11" count="1" type="stmt"/>
       </file>
       <file name="sprint.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\core\sprint.ts">
-        <metrics statements="22" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="4"/>
+        <metrics statements="26" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="4"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -40,13 +41,17 @@
         <line num="31" count="2" type="stmt"/>
         <line num="33" count="2" type="stmt"/>
         <line num="34" count="2" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
-        <line num="50" count="2" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
         <line num="62" count="0" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
       </file>
     </package>
     <package name="reportExportStrategy">
