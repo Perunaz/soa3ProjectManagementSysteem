@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1679528773881" clover="3.2.0">
-  <project timestamp="1679528773882" name="All files">
-    <metrics statements="73" coveredstatements="43" conditionals="0" coveredconditionals="0" methods="44" coveredmethods="14" elements="117" coveredelements="57" complexity="0" loc="73" ncloc="73" packages="3" files="10" classes="10"/>
+<coverage generated="1679580690980" clover="3.2.0">
+  <project timestamp="1679580690980" name="All files">
+    <metrics statements="74" coveredstatements="43" conditionals="0" coveredconditionals="0" methods="45" coveredmethods="14" elements="119" coveredelements="57" complexity="0" loc="74" ncloc="74" packages="3" files="10" classes="10"/>
     <package name="core">
-      <metrics statements="36" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="18" coveredmethods="9"/>
+      <metrics statements="37" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="9"/>
       <file name="backlog.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\core\backlog.ts">
-        <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="3" count="1" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
       </file>
       <file name="project.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\core\project.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
