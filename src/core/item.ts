@@ -5,6 +5,7 @@ import { ReadyForTestingItemState } from "../states/itemStates/readyForTestingIt
 import { TestingItemState } from "../states/itemStates/testingItemState";
 import { TodoItemState } from "../states/itemStates/todoItemState";
 import { TestedItemState } from "../states/itemStates/testedItemState";
+import { Activity } from "./activity";
 
 export class Item{
     private todoItemState: ItemState;
@@ -18,6 +19,7 @@ export class Item{
 
     private id: number;
     private developerId: number;
+    private activities: Activity[] = [];
 
     constructor(id: number, developerId: number) { 
         this.todoItemState = new TodoItemState(this);
@@ -33,12 +35,13 @@ export class Item{
         this.developerId = developerId;
     }
 
-    public createActivity(): void {
-        throw new Error("Method not implemented.");
+    public createActivity(activity: Activity): void {
+        this.activities.push(activity);
     }
 
-    public updateActivity(): void {
-        throw new Error("Method not implemented.");
+    public finishActivity(activityId: number): void {
+        let activityToFinish = this.activities.find(activity => activity.getActivityId() === activityId)
+        activityToFinish?.markAsDone();
     }
 
     public deleteActivity(): void {
