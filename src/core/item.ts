@@ -40,7 +40,7 @@ export class Item{
     }
 
     public finishActivity(activityId: number): void {
-        let activityToFinish = this.activities.find(activity => activity.activityId === activityId)
+        let activityToFinish = this.activities.find(activity => activity.getActivityId() === activityId)
         activityToFinish?.markAsDone();
     }
 

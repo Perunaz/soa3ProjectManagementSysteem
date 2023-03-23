@@ -2,7 +2,7 @@ export class Activity {
     private developerId: number;
     private description: string;
     private done: boolean = false;
-    activityId: number;
+    private activityId: number;
 
     constructor(developerId: number, activityId: number, description: string) { 
         this.developerId = developerId;
@@ -12,5 +12,9 @@ export class Activity {
 
     markAsDone(): void { 
         this.done = true;
+    }
+
+    getActivityId(): number { 
+        return this.activityId;
     }
 }
