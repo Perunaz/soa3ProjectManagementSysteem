@@ -6,8 +6,10 @@ import { TestingItemState } from "../states/itemStates/testingItemState";
 import { TodoItemState } from "../states/itemStates/todoItemState";
 import { TestedItemState } from "../states/itemStates/testedItemState";
 import { Activity } from "./activity";
+import { CompositeComponent } from "../itemThread/compositeComponent";
+import { Visitor } from "../itemThread/Visitor";
 
-export class Item{
+export class Item extends CompositeComponent{
     private todoItemState: ItemState;
     private doingItemState: ItemState;
     private readyForTestingItemState: ItemState;
@@ -21,7 +23,8 @@ export class Item{
     private developerId: number;
     private activities: Activity[] = [];
 
-    constructor(id: number, developerId: number) { 
+    constructor(id: number, developerId: number) {
+        super();
         this.todoItemState = new TodoItemState(this);
         this.doingItemState = new DoingItemState(this);
         this.readyForTestingItemState = new ReadyForTestingItemState(this);
@@ -50,6 +53,11 @@ export class Item{
 
     public isDone(): boolean {
         throw new Error("Method not implemented.");
+    }
+
+    acceptVisitor(visitor: Visitor): void {
+        visitor.visitItem(this);
+        super.acceptVisitor(visitor);
     }
 
     public setState(state: ItemState): void {
