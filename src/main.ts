@@ -13,8 +13,9 @@ import { ReadyForTestingItemState } from "./states/itemStates/readyForTestingIte
 
 let reportExportStrategy = new ExportReportToPDF();
 let backlog = new Backlog();
+let sprintBacklog = new Backlog();
 let pipeline = new DeveloperPipeline();
-let sprint = new Sprint("Sprint1", reportExportStrategy, backlog, pipeline);
+let sprint = new Sprint("Sprint 1", new Date(), new Date(), backlog, sprintBacklog, pipeline);
 
 let projectManagement = new ProjectManagement(sprint);
 let project = new Project(projectManagement);
@@ -23,3 +24,5 @@ let project = new Project(projectManagement);
 let discordService = new DiscordService();
 let emailService = new EmailService();
 let adapter = new MessengerAdapter(discordService);
+
+sprint.exportReport(false);
