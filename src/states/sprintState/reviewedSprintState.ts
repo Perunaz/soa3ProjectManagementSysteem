@@ -1,4 +1,5 @@
 import { Sprint } from "../../core/sprint";
+import { ProductOwner } from "../../users/productOwner";
 import { SprintState } from "./sprintState";
 
 export class ReviewedSprintState implements SprintState {
@@ -14,12 +15,11 @@ export class ReviewedSprintState implements SprintState {
     editSprint(): void {
         console.log("can't edit sprint in this state");
     }
-    nextState(): void {
-        //TODO: this should send a notification to scrum master if backlog isn't finished and not go to the next state
+    nextState(productOwner: ProductOwner): void {
         if(this.sprint.getPipeline().isReleased()) {
             this.sprint.setState(this.sprint.getClosedSprintState());
         } else {
-            this.sprint.getProductOwner().sendNotification("Pipeline failed")
+            productOwner.getMessageService().sendMessage(productOwner.getName(), "Pipeline failed to release")
         }
     }
 }

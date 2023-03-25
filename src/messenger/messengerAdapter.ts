@@ -8,8 +8,8 @@ export class MessengerAdapter {
     this.messageService = adaptee;
   }
 
-  sendMessage(body: string): void {
-    this.messageService.sendMessage(body);
+  sendMessage(name: string, body: string): void {
+    this.messageService.sendMessage(name, body);
   }
 }
 

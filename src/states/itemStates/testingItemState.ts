@@ -1,28 +1,27 @@
 import { Item } from "../../core/item";
+import { ProductOwner } from "../../users/productOwner";
 import { ItemState } from "./itemState";
 
 export class TestingItemState implements ItemState {
-    isReviewable: boolean;
     item: Item;
 
-    constructor(item: Item) {  
+    constructor(item: Item) {
         this.item = item;
-        this.isReviewable = false
     }
 
-    addItem(): void {
-        throw new Error("Method not implemented.");
+    nextState(): void {
+        console.log("Item still needs to be tested");
     }
-
-    removeItem(): void {
-        throw new Error("Method not implemented.");
+    
+    testItem(isValidTest: boolean): void {
+        if(isValidTest) {
+            this.item.setState(this.item.getTestedItemState());
+        } else {
+            this.item.setState(this.item.getToDoItemState());
+        }
     }
-
-    editItem(): void {
-        throw new Error("Method not implemented.");
-    }
-
-    deleteItem(): void {
+    
+    changeDeveloper(developerId: number, productOwner: ProductOwner): void {
         throw new Error("Method not implemented.");
     }
 }

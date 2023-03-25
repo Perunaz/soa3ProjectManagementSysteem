@@ -11,6 +11,7 @@ import { ClosedSprintState } from "../states/sprintState/closedSprintState";
 import { ExportReportToPDF } from "../reportExportStrategy/exportReportToPDF";
 import { ExportReportToPNG } from "../reportExportStrategy/exportReportToPNG";
 import { ProductOwner } from "../users/productOwner";
+import { Developer } from "../users/developer";
 
 export class Sprint {
     private createdSprintState: SprintState;
@@ -28,7 +29,6 @@ export class Sprint {
     private name: string;
     private startDate: Date;
     private endDate: Date;
-    private productOwner: ProductOwner;
     private reportExportStrategy: ReportExportStrategy;
 
     constructor(
@@ -38,7 +38,8 @@ export class Sprint {
         sprintBacklog: Backlog, 
         productBacklog: Backlog,
         pipeline: Pipeline,
-        productOwner: ProductOwner) 
+        productOwner: ProductOwner,
+        developers: Developer[]) 
     {
         this.createdSprintState = new CreatedSprintState(this);
         this.inProgressSprintState = new InProgressSprintState(this);
@@ -55,7 +56,6 @@ export class Sprint {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.productOwner = productOwner;
         this.reportExportStrategy = new ExportReportToPDF();
     }
 
@@ -70,8 +70,8 @@ export class Sprint {
         this._state.addSprintBacklogItem(index);
     }
 
-    public editSprint(): void {
-        this._state.editSprint();
+    public editSprint(name?: string, startDate?: Date, endDate?: Date): void {
+        this._state.editSprint(name, startDate, endDate);
     }
 
     public nextState(): void {
@@ -128,10 +128,6 @@ export class Sprint {
 
     public getEndDate(): Date {
         return this.endDate;
-    }
-
-    public getProductOwner(): ProductOwner { 
-        return this.productOwner;
     }
 
     public setName(name: string): void {

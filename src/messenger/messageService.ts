@@ -1,3 +1,3 @@
 export interface MessageService {
-  sendMessage(body: string): void;
+  sendMessage(name: string, body: string): void;
 }
