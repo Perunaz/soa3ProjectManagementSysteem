@@ -10,14 +10,17 @@ import { DeveloperPipeline } from "./pipeline/developerPipeline";
 import { Pipeline } from "./pipeline/pipeline";
 import { ExportReportToPDF } from "./reportExportStrategy/exportReportToPDF";
 import { ReadyForTestingItemState } from "./states/itemStates/readyForTestingItemState";
+import { ProductOwner } from "./users/productOwner";
 
 let reportExportStrategy = new ExportReportToPDF();
 let backlog = new Backlog();
 let sprintBacklog = new Backlog();
 let pipeline = new DeveloperPipeline();
-let sprint = new Sprint("Sprint 1", new Date(), new Date(), backlog, sprintBacklog, pipeline);
+let messageService = new EmailService();
+let productOwner = new ProductOwner(1, "Product Owner", messageService);
+let sprint = new Sprint("Sprint 1", new Date(), new Date(), backlog, sprintBacklog, pipeline, productOwner);
 
-let projectManagement = new ProjectManagement(sprint);
+let projectManagement = new ProjectManagement(productOwner);
 let project = new Project(projectManagement);
 
 
@@ -25,4 +28,4 @@ let discordService = new DiscordService();
 let emailService = new EmailService();
 let adapter = new MessengerAdapter(discordService);
 
-sprint.exportReport(false);
+sprint.exportReport(true);
