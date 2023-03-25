@@ -1,5 +1,5 @@
 import { Component } from "./component";
-import { Visitor } from "./Visitor";
+import { Visitor } from "./visitor";
 
 export class Comment extends Component {
     private commentText: string;

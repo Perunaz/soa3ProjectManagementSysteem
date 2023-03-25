@@ -1,7 +1,7 @@
 import { Sprint } from "../../core/sprint";
 import { SprintState } from "./sprintState";
 
-export class FinishedSprintState implements SprintState {
+export class ClosedSprintState implements SprintState {
     sprint: Sprint;
 
     constructor(_sprint: Sprint) {  
@@ -15,10 +15,6 @@ export class FinishedSprintState implements SprintState {
         console.log("can't edit sprint in this state");
     }
     nextState(): void {
-        if(this.sprint.getSprintBacklog().isFinished()) {
-            this.sprint.setState(this.sprint.getReviewedSprintState());
-        } else {
-            this.sprint.setState(this.sprint.getCancelledSprintState());
-        }
+        console.log("sprint can't go to next state from this state");
     }
 }

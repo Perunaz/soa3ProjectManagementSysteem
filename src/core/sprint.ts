@@ -7,6 +7,7 @@ import { CancelledSprintState } from "../states/sprintState/cancelledSprintState
 import { Backlog } from "./backlog";
 import { ReportExportStrategy } from "../reportExportStrategy/reportExportStrategy";
 import { Pipeline } from "../pipeline/pipeline";
+import { ClosedSprintState } from "../states/sprintState/closedSprintState";
 
 export class Sprint {
     private createdSprintState: SprintState;
@@ -14,43 +15,51 @@ export class Sprint {
     private finishedSprintState: SprintState;
     private reviewedSprintState: SprintState;
     private cancelledSprintState: SprintState;
+    private closedSprintState: SprintState;
 
     private _state: SprintState;
-    private backlog: Backlog;
+    private sprintBacklog: Backlog;
+    private productBacklog: Backlog;
     private pipeline: Pipeline;
 
     private name: string;
+    private startDate: Date;
+    private endDate: Date;
     private reportExportStrategy: ReportExportStrategy;
 
-    constructor(name: string, reportExportStrategy: ReportExportStrategy, backlog: Backlog, pipeline: Pipeline) { 
+    constructor(name: string, startDate: Date, endDate: Date, reportExportStrategy: ReportExportStrategy, sprintBacklog: Backlog, productBacklog: Backlog, pipeline: Pipeline) { 
         this.createdSprintState = new CreatedSprintState(this);
         this.inProgressSprintState = new InProgressSprintState(this);
         this.finishedSprintState = new FinishedSprintState(this);
         this.reviewedSprintState = new ReviewedSprintState(this);
         this.cancelledSprintState = new CancelledSprintState(this);
+        this.closedSprintState = new ClosedSprintState(this);
 
         this._state = this.createdSprintState;
-        this.backlog = backlog;
+        this.sprintBacklog = sprintBacklog;
+        this.productBacklog = productBacklog;
         this.pipeline = pipeline;
 
         this.name = name;
+        this.startDate = startDate;
+        this.endDate = endDate;
         this.reportExportStrategy = reportExportStrategy;
     }
 
-    public addSprint(): void {
-        this._state.addSprint();
+    public exportReport(): void {
+        this.reportExportStrategy.exportReport(this);
     }
 
-    public removeSprint(): void {
-        this._state.removeSprint();
+    public addSprintBacklogItem(index: number): void {
+        this._state.addSprintBacklogItem(index);
     }
 
     public editSprint(): void {
         this._state.editSprint();
     }
 
-    public deleteSprint(): void {
-        this._state.deleteSprint();
+    public nextState(): void {
+        this._state.nextState();
     }
 
     public setState(state: SprintState): void {
@@ -79,5 +88,45 @@ export class Sprint {
 
     public getCancelledSprintState(): CancelledSprintState {
         return this.cancelledSprintState;
+    }
+
+    public getClosedSprintState(): CancelledSprintState {
+        return this.closedSprintState;
+    }
+
+    public getProductBacklog(): Backlog {
+        return this.productBacklog;
+    }
+
+    public getSprintBacklog(): Backlog {
+        return this.sprintBacklog;
+    }
+
+    public getName(): string { 
+        return this.name;
+    }
+
+    public getStartDate(): Date { 
+        return this.startDate;
+    }
+
+    public getEndDate(): Date { 
+        return this.endDate;
+    }
+
+    public setName(name: string): void { 
+        this.name = name;
+    }
+
+    public setStartDate(startDate: Date): void { 
+        this.startDate = startDate;
+    }
+
+    public setEndDate(endDate: Date): void { 
+        this.endDate = endDate;
+    }
+
+    public getPipeline(): Pipeline { 
+        return this.pipeline;
     }
 }

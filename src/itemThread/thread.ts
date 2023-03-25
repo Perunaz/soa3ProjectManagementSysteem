@@ -1,5 +1,5 @@
 import { CompositeComponent } from "./compositeComponent";
-import { Visitor } from "./Visitor";
+import { Visitor } from "./visitor";
 
 export class Thread extends CompositeComponent {
     private title: string;

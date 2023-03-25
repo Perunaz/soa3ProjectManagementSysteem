@@ -1,3 +1,4 @@
+import { DoneItemState } from "../states/itemStates/doneItemState";
 import { Item } from "./item";
 
 export class Backlog{
@@ -11,7 +12,16 @@ export class Backlog{
         this.item.push(item)
     }
 
-    public createActivity(): void {
-        throw new Error("Method not implemented.");
+    public getItem(index: number): Item { 
+        return this.item[index];
+    }
+
+    public isFinished(): boolean { 
+        this.item.forEach(item => {
+            if(item.getState() !== item.getDoneItemState()) {
+                return false;
+            }
+        })
+        return true;
     }
 }

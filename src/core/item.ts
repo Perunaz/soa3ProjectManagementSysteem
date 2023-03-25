@@ -7,7 +7,7 @@ import { TodoItemState } from "../states/itemStates/todoItemState";
 import { TestedItemState } from "../states/itemStates/testedItemState";
 import { Activity } from "./activity";
 import { CompositeComponent } from "../itemThread/compositeComponent";
-import { Visitor } from "../itemThread/Visitor";
+import { Visitor } from "../itemThread/visitor";
 
 export class Item extends CompositeComponent{
     private todoItemState: ItemState;
@@ -48,10 +48,6 @@ export class Item extends CompositeComponent{
     }
 
     public deleteActivity(): void {
-        throw new Error("Method not implemented.");
-    }
-
-    public isDone(): boolean {
         throw new Error("Method not implemented.");
     }
 

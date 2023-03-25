@@ -1,14 +1,12 @@
+import { Backlog } from "../../core/backlog";
 import { Sprint } from "../../core/sprint";
 
 export interface SprintState {
-    isReviewable: boolean;
     sprint: Sprint;
 
-    addSprint(): void;
+    addSprintBacklogItem(index: number): void;
 
-    removeSprint(): void;
+    editSprint(name?: string, startDate?: Date, endDate?: Date): void;
 
-    editSprint(): void;
-
-    deleteSprint(): void;
+    nextState(): void;
 }

@@ -2,24 +2,19 @@ import { Sprint } from "../../core/sprint";
 import { SprintState } from "./sprintState";
 
 export class InProgressSprintState implements SprintState {
-    isReviewable: boolean;
     sprint: Sprint;
 
     constructor(_sprint: Sprint) {  
         this.sprint = _sprint;
-        this.isReviewable = false;
     }
 
-    addSprint(): void {
-        throw new Error("Method not implemented.");
-    }
-    removeSprint(): void {
-        throw new Error("Method not implemented.");
+    addSprintBacklogItem(index: number): void {
+        console.log("can't add items to sprint backlog in this state");
     }
     editSprint(): void {
-        throw new Error("Method not implemented.");
+        console.log("can't edit sprint in this state");
     }
-    deleteSprint(): void {
-        throw new Error("Method not implemented.");
+    nextState(): void {
+        this.sprint.setState(this.sprint.getFinishedSprintState());
     }
 }
