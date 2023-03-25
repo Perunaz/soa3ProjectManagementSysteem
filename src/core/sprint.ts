@@ -37,9 +37,8 @@ export class Sprint {
         endDate: Date, 
         sprintBacklog: Backlog, 
         productBacklog: Backlog,
-        pipeline: Pipeline,
-        productOwner: ProductOwner,
-        developers: Developer[]) 
+        pipeline: Pipeline
+        ) 
     {
         this.createdSprintState = new CreatedSprintState(this);
         this.inProgressSprintState = new InProgressSprintState(this);

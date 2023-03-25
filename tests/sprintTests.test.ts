@@ -34,8 +34,7 @@ describe.each([
       new Date(2023, 4, 7),
       backlog,
       backlog,
-      pipeline,
-      productOwner
+      pipeline
     );
     item = new Item(3, 2);
   });

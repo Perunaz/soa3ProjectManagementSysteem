@@ -22,7 +22,7 @@ export class ProjectManagement {
         productBacklog: Backlog,
         pipeline: Pipeline) {
 
-        let sprint = new Sprint(name, startDate, endDate, sprintBacklog, productBacklog, pipeline, this.productOwner, this.developers);
+        let sprint = new Sprint(name, startDate, endDate, sprintBacklog, productBacklog, pipeline);
         this.sprints.push(sprint);
     }
 
