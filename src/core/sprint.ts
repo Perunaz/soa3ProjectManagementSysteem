@@ -63,7 +63,7 @@ export class Sprint {
         this.reportExportStrategy = isPDF
             ? new ExportReportToPDF()
             : new ExportReportToPNG();
-        console.log(this.reportExportStrategy.exportReport(this));
+        this.reportExportStrategy.exportReport(this);
     }
 
     public addSprintBacklogItem(index: number): void {
@@ -129,7 +129,7 @@ export class Sprint {
     public getEndDate(): Date {
         return this.endDate;
     }
-    
+
     public getProductOwner(): ProductOwner { 
         return this.productOwner;
     }

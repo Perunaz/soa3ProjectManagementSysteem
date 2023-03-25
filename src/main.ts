@@ -12,7 +12,6 @@ import { ExportReportToPDF } from "./reportExportStrategy/exportReportToPDF";
 import { ReadyForTestingItemState } from "./states/itemStates/readyForTestingItemState";
 import { ProductOwner } from "./users/productOwner";
 
-let reportExportStrategy = new ExportReportToPDF();
 let backlog = new Backlog();
 let sprintBacklog = new Backlog();
 let pipeline = new DeveloperPipeline();
