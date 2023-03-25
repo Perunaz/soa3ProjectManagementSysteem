@@ -1,4 +1,5 @@
 import { Sprint } from "../../core/sprint";
+import { ProductOwner } from "../../users/productOwner";
 import { SprintState } from "./sprintState";
 
 export class CreatedSprintState implements SprintState {

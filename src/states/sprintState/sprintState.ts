@@ -1,5 +1,6 @@
 import { Backlog } from "../../core/backlog";
 import { Sprint } from "../../core/sprint";
+import { ProductOwner } from "../../users/productOwner";
 
 export interface SprintState {
     sprint: Sprint;
@@ -8,5 +9,5 @@ export interface SprintState {
 
     editSprint(name?: string, startDate?: Date, endDate?: Date): void;
 
-    nextState(): void;
+    nextState(productOwner?: ProductOwner): void;
 }
