@@ -17,6 +17,7 @@ export class FinishedSprintState implements SprintState {
     nextState(): void {
         if(this.sprint.getSprintBacklog().isFinished()) {
             this.sprint.setState(this.sprint.getReviewedSprintState());
+            this.sprint.getPipeline().build();
         } else {
             this.sprint.setState(this.sprint.getCancelledSprintState());
         }

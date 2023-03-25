@@ -8,6 +8,7 @@ import { Backlog } from "./backlog";
 import { ReportExportStrategy } from "../reportExportStrategy/reportExportStrategy";
 import { Pipeline } from "../pipeline/pipeline";
 import { ClosedSprintState } from "../states/sprintState/closedSprintState";
+import { ProductOwner } from "../users/productOwner";
 
 export class Sprint {
     private createdSprintState: SprintState;
@@ -25,6 +26,7 @@ export class Sprint {
     private name: string;
     private startDate: Date;
     private endDate: Date;
+    private productOwner: ProductOwner;
     private reportExportStrategy: ReportExportStrategy;
 
     constructor(
@@ -34,7 +36,8 @@ export class Sprint {
         reportExportStrategy: ReportExportStrategy,
         sprintBacklog: Backlog, 
         productBacklog: Backlog,
-        pipeline: Pipeline) 
+        pipeline: Pipeline,
+        productOwner: ProductOwner) 
     {
         this.createdSprintState = new CreatedSprintState(this);
         this.inProgressSprintState = new InProgressSprintState(this);
@@ -51,6 +54,7 @@ export class Sprint {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.productOwner = productOwner;
         this.reportExportStrategy = reportExportStrategy;
     }
 
@@ -120,6 +124,10 @@ export class Sprint {
 
     public getEndDate(): Date {
         return this.endDate;
+    }
+    
+    public getProductOwner(): ProductOwner { 
+        return this.productOwner;
     }
 
     public setName(name: string): void {

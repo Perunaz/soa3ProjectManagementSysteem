@@ -5,10 +5,6 @@ export abstract class Pipeline {
     }
 
     abstract build(): void;
-  
-    abstract releaseSprint(): void;
-
-    abstract cancelRelease(): void;
 
     abstract installPackages(): void;
 

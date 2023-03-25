@@ -16,6 +16,10 @@ export class ReviewedSprintState implements SprintState {
     }
     nextState(): void {
         //TODO: this should send a notification to scrum master if backlog isn't finished and not go to the next state
-        this.sprint.setState(this.sprint.getClosedSprintState());
+        if(this.sprint.getPipeline().isReleased()) {
+            this.sprint.setState(this.sprint.getClosedSprintState());
+        } else {
+            this.sprint.getProductOwner().sendNotification("Pipeline failed")
+        }
     }
 }

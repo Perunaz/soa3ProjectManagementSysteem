@@ -19,29 +19,6 @@ export class MainPipeline extends Pipeline {
     console.log("Notifying Scrum Master and Product Owner of release");
   }
 
-  releaseSprint(): void {
-    if (this.isReleased() === false) {
-      console.log("Cannot release sprint: pipeline has not been built");
-      return;
-    }
-    console.log("Sprint has been released and is now closed");
-
-    // Notificatie naar scrum master en product owner
-    console.log("Notifying Scrum Master and Product Owner of sprint closure");
-  }
-
-  cancelRelease(): void {
-    if (this.isReleased() === false) {
-      console.log("Cannot cancel release: pipeline has not been built");
-      return;
-    }
-
-    console.log("Release has been cancelled");
-
-    // Notificatie naar scrum master
-    console.log("Notifying Scrum Master of release cancellation");
-  }
-
   installPackages(): void {
     console.log("Installing packages...");
   }
