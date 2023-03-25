@@ -2,6 +2,7 @@ import { DoneItemState } from "../states/itemStates/doneItemState";
 import { Item } from "./item";
 
 export class Backlog{
+
     private item: Item[];
 
     constructor() {

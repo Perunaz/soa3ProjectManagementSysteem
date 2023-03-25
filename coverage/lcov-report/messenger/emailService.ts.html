@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for reportExportStrategy/exportReportToPNG.ts</title>
+    <title>Code coverage report for messenger/emailService.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,7 +19,7 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">reportExportStrategy</a> exportReportToPNG.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">messenger</a> emailService.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
@@ -73,19 +73,19 @@
 <a name='L8'></a><a href='#L8'>8</a>
 <a name='L9'></a><a href='#L9'>9</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Sprint } from "../core/sprint";
-import { ReportExportStrategy } from "./reportExportStrategy";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { MessageService } from "./messageService";
 &nbsp;
-export class ExportReportToPNG implements ReportExportStrategy {
-<span class="fstat-no" title="function not covered" >  exportReport(</span>sprint: Sprint): void {
-<span class="cstat-no" title="statement not covered" >    console.log(`Exporting report to PNG for sprint: ${sprint.getName()}`);</span>
-  }
+export class EmailService implements MessageService {
+<span class="fstat-no" title="function not covered" >    sendMessage(</span>body: string): void {
+<span class="cstat-no" title="statement not covered" >        console.log(`Sending email message: ${body}`);</span>
+    }
+&nbsp;
 }
 &nbsp;</pre></td></tr></table></pre>
 

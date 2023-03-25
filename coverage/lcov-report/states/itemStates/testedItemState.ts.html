@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for states/sprintState/cancelledSprintState.ts</title>
+    <title>Code coverage report for states/itemStates/testedItemState.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">states/sprintState</a> cancelledSprintState.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">states/itemStates</a> testedItemState.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">42.85% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/5</span>
+                <span class='fraction'>3/7</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">20% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/4</span>
+                <span class='fraction'>1/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">42.85% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/5</span>
+                <span class='fraction'>3/7</span>
             </div>
         
             
@@ -82,43 +82,67 @@
 <a name='L17'></a><a href='#L17'>17</a>
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Sprint } from "../../core/sprint";
-import { SprintState } from "./sprintState";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Item } from "../../core/item";
+import { ItemState } from "./itemState";
 &nbsp;
-export class CancelledSprintState implements SprintState {
-    sprint: Sprint;
+export class TestedItemState implements ItemState {
+    isReviewable: boolean;
+    item: Item;
 &nbsp;
-    constructor(_sprint: Sprint) {  
-        this.sprint = _sprint;
+    constructor(item: Item) {  
+        this.item = item;
+        this.isReviewable = false
+    }
+    
+<span class="fstat-no" title="function not covered" >    addItem(</span>): void {
+<span class="cstat-no" title="statement not covered" >        throw new Error("Method not implemented.");</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    addSprintBacklogItem(</span>index: number): void {
-<span class="cstat-no" title="statement not covered" >        console.log("can't add items to sprint backlog in this state");</span>
+<span class="fstat-no" title="function not covered" >    removeItem(</span>): void {
+<span class="cstat-no" title="statement not covered" >        throw new Error("Method not implemented.");</span>
     }
-<span class="fstat-no" title="function not covered" >    editSprint(</span>): void {
-<span class="cstat-no" title="statement not covered" >        console.log("can't edit sprint in this state");</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >    editItem(</span>): void {
+<span class="cstat-no" title="statement not covered" >        throw new Error("Method not implemented.");</span>
     }
-<span class="fstat-no" title="function not covered" >    nextState(</span>): void {
-<span class="cstat-no" title="statement not covered" >        console.log("sprint can't go to next state from this state");</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >    deleteItem(</span>): void {
+<span class="cstat-no" title="statement not covered" >        throw new Error("Method not implemented.");</span>
     }
 }</pre></td></tr></table></pre>
 
