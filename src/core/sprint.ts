@@ -8,6 +8,8 @@ import { Backlog } from "./backlog";
 import { ReportExportStrategy } from "../reportExportStrategy/reportExportStrategy";
 import { Pipeline } from "../pipeline/pipeline";
 import { ClosedSprintState } from "../states/sprintState/closedSprintState";
+import { ExportReportToPDF } from "../reportExportStrategy/exportReportToPDF";
+import { ExportReportToPNG } from "../reportExportStrategy/exportReportToPNG";
 
 export class Sprint {
     private createdSprintState: SprintState;
@@ -31,7 +33,6 @@ export class Sprint {
         name: string,
         startDate: Date, 
         endDate: Date, 
-        reportExportStrategy: ReportExportStrategy,
         sprintBacklog: Backlog, 
         productBacklog: Backlog,
         pipeline: Pipeline) 
@@ -51,11 +52,14 @@ export class Sprint {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.reportExportStrategy = reportExportStrategy;
+        this.reportExportStrategy = new ExportReportToPDF();
     }
 
-    public exportReport(): void {
-        this.reportExportStrategy.exportReport(this);
+    public exportReport(isPDF: boolean): void {
+        this.reportExportStrategy = isPDF
+            ? new ExportReportToPDF()
+            : new ExportReportToPNG();
+        console.log(this.reportExportStrategy.exportReport(this));
     }
 
     public addSprintBacklogItem(index: number): void {
