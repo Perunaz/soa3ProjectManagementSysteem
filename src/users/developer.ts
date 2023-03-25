@@ -2,7 +2,7 @@ import { User } from "./user";
 import { Activity } from "../core/activity";
 import { Item } from "../core/item";
 import { Backlog } from "../core/backlog";
-import { Visitor } from "../itemThread/Visitor";
+import { Visitor } from "../itemThread/visitor";
 import { Thread } from "../itemThread/thread";
 import { Comment } from "../itemThread/comment";
 
