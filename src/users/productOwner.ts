@@ -4,15 +4,23 @@ import { User } from "./user";
 export class ProductOwner implements User{
     id: number;
     name: string;
-    messageService: MessageService
+    prefferedMessageService: MessageService;
 
     constructor(id: number, name: string, messageService: MessageService) {
         this.id = id
         this.name = name;
-        this.messageService = messageService;
+        this.prefferedMessageService = messageService;
+    }
+    
+    getId(): number {
+        return this.id;
     }
 
-    sendNotification(notification: string) {
-        this.messageService.sendMessage(notification);
+    getName(): string {
+        return this.name;
+    }
+
+    getMessageService(): MessageService {
+        return this.prefferedMessageService;
     }
 }

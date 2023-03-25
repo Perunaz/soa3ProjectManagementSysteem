@@ -8,6 +8,8 @@ import { TestedItemState } from "../states/itemStates/testedItemState";
 import { Activity } from "./activity";
 import { CompositeComponent } from "../itemThread/compositeComponent";
 import { Visitor } from "../itemThread/visitor";
+import { ProductOwner } from "../users/productOwner";
+import { Developer } from "../users/developer";
 
 export class Item extends CompositeComponent{
     private todoItemState: ItemState;
@@ -36,6 +38,18 @@ export class Item extends CompositeComponent{
 
         this.id = id;
         this.developerId = developerId;
+    }
+
+    nextState(developers?: Developer[]): void {
+        this._state.nextState(developers);
+    }
+
+    testItem(isValidTest: boolean): void {
+        this._state.testItem(isValidTest);
+    }
+
+    changeDeveloper(developerId: number, productOwner: ProductOwner): void {
+        this._state.changeDeveloper(developerId, productOwner);
     }
 
     public createActivity(activity: Activity): void {
@@ -86,5 +100,17 @@ export class Item extends CompositeComponent{
 
     public getDoneItemState(): DoneItemState { 
         return this.doneItemState;
+    }
+
+    public getDeveloperId(): number {
+        return this.developerId;
+    }
+
+    public setDeveloperId(developerId: number) {
+        this.developerId = developerId;
+    }
+
+    public getId(): number {
+        return this.id;
     }
 }
