@@ -40,15 +40,15 @@ export class Item extends CompositeComponent{
         this.developerId = developerId;
     }
 
-    nextState(developers?: Developer[]): void {
+    public nextState(developers?: Developer[]): void {
         this._state.nextState(developers);
     }
 
-    testItem(isValidTest: boolean): void {
+    public testItem(isValidTest: boolean): void {
         this._state.testItem(isValidTest);
     }
 
-    changeDeveloper(developerId: number, productOwner: ProductOwner): void {
+    public changeDeveloper(developerId: number, productOwner: ProductOwner): void {
         this._state.changeDeveloper(developerId, productOwner);
     }
 
@@ -61,11 +61,11 @@ export class Item extends CompositeComponent{
         activityToFinish?.markAsDone();
     }
 
-    public deleteActivity(): void {
-        throw new Error("Method not implemented.");
+    public deleteActivity(activityId: number): void {
+        this.activities.slice(activityId, 1);
     }
 
-    acceptVisitor(visitor: Visitor): void {
+    public acceptVisitor(visitor: Visitor): void {
         visitor.visitItem(this);
         super.acceptVisitor(visitor);
     }

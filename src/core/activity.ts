@@ -10,11 +10,11 @@ export class Activity {
         this.description = description;
     }
 
-    markAsDone(): void { 
+    public markAsDone(): void { 
         this.done = true;
     }
 
-    getActivityId(): number { 
+    public getActivityId(): number { 
         return this.activityId;
     }
 }
