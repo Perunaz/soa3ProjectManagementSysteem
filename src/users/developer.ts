@@ -32,15 +32,19 @@ export class Developer extends Visitor implements User{
     }
 
     public visitItem(item: Item): void {
-        
+        console.log("=".repeat(item.getId().toString().length + 14));
+        console.log("~~~ Item: " + item.getId() + " ~~~");
+        console.log("=".repeat(item.getId().toString().length + 14));
     }
 
     public visitThread(thread: Thread): void {
-        
+        console.log("=".repeat(thread.getThreadTitle().length + 16));
+        console.log("~~~ Thread: " + thread.getThreadTitle() + " ~~~");
+        console.log("=".repeat(thread.getThreadTitle().length + 16));
     }
     
     public visitComment(comment: Comment): void {
-        
+        console.log(comment.getDeveloperName() + ": " + comment.getCommentText());
     }
 
     getId(): number {
