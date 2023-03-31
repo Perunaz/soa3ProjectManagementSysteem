@@ -52,19 +52,19 @@ describe.each([
   });
   
   test("should be able to edit the sprint details", () => {
-	sprint.editSprint();
-	sprint.setName("Sprint2");
-	sprint.setStartDate(new Date(2023, 4, 8));
-	sprint.setEndDate(new Date(2023, 4, 14));
-	const item = new Item(1, 2);
-	sprint.getProductBacklog().addItem(item);
-	sprint.setState(sprint.getInProgressSprintState());
-  
-	expect(sprint.getName()).toBe("Sprint2");
-	expect(sprint.getStartDate()).toEqual(new Date(2023, 4, 8));
-	expect(sprint.getEndDate()).toEqual(new Date(2023, 4, 14));
-	expect(sprint.getProductBacklog().getItem(0)).toBe(item);
-	expect(sprint.getState().constructor.name).toBe("InProgressSprintState");
+    sprint.editSprint();
+    sprint.setName("Sprint2");
+    sprint.setStartDate(new Date(2023, 4, 8));
+    sprint.setEndDate(new Date(2023, 4, 14));
+    const item = new Item(1, 2);
+    sprint.getProductBacklog().addItem(item);
+    sprint.setState(sprint.getInProgressSprintState());
+    
+    expect(sprint.getName()).toBe("Sprint2");
+    expect(sprint.getStartDate()).toEqual(new Date(2023, 4, 8));
+    expect(sprint.getEndDate()).toEqual(new Date(2023, 4, 14));
+    expect(sprint.getProductBacklog().getItem(0)).toBe(item);
+    expect(sprint.getState().constructor.name).toBe("InProgressSprintState");
   });
   
   test("should be able to change state to the next state", () => {

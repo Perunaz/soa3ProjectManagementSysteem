@@ -14,7 +14,6 @@ export class ProjectManagement {
         this.productOwner = productOwner;
         this.developers = developers
     }
-
     addSprint(name: string,
         startDate: Date,
         endDate: Date,

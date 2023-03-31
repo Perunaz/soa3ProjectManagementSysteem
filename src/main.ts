@@ -25,7 +25,7 @@ let sprint = new Sprint("Sprint 1", new Date(), new Date(), backlog, sprintBackl
 
 
 let projectManagement = new ProjectManagement(productOwner, developers);
-let project = Project.getInstance(projectManagement);
+let project = new Project(projectManagement);
 
 let item = new Item(1, projectManagement.getDevelopers()[0].getId());
 let itemThread1 = new Thread("is this really needed?");
