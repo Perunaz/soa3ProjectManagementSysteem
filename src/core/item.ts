@@ -53,11 +53,13 @@ export class Item extends CompositeComponent{
     }
 
     public checkActivities(): boolean {
-        this.activities.forEach(activity => {
-            if(!activity.getDone()) {
-                return false;
-            }
-        });
+        if (this.activities.length > 0) {
+            this.activities.forEach(activity => {
+                if(!activity.getDone()) {
+                    return false;
+                }
+            });
+        }
         return true;
     }
 
