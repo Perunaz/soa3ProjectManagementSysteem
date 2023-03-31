@@ -19,7 +19,7 @@ export class DoingItemState implements ItemState {
                 }
             })
         } else {
-            console.log("not all activities are done!");
+            this.item.setState(this.item.getToDoItemState());
         }
     }
     
