@@ -28,10 +28,14 @@ let projectManagement = new ProjectManagement(productOwner, developers);
 let project = Project.getInstance(projectManagement);
 
 let item = new Item(1, projectManagement.getDevelopers()[0].getId());
-let itemThread = new Thread("is this really needed?");
-item.addComponent(itemThread);
-itemThread.addComponent(new Comment("I think so yes!", projectManagement.getDevelopers()[0].getName()));
-itemThread.addComponent(new Comment("I don't think so", projectManagement.getDevelopers()[1].getName()));
+let itemThread1 = new Thread("is this really needed?");
+item.addComponent(itemThread1);
+itemThread1.addComponent(new Comment("I think so yes!", projectManagement.getDevelopers()[0].getName()));
+itemThread1.addComponent(new Comment("I don't think so.", projectManagement.getDevelopers()[1].getName()));
+let itemThread2 = new Thread("I need some help with this!");
+item.addComponent(itemThread2);
+itemThread2.addComponent(new Comment("I think I can help.", projectManagement.getDevelopers()[1].getName()));
+itemThread2.addComponent(new Comment("Nice!", projectManagement.getDevelopers()[0].getName()));
 
 item.acceptVisitor(projectManagement.getDevelopers()[0]);
 

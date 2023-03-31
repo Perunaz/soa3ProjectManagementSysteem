@@ -38,13 +38,13 @@ export class Developer extends Visitor implements User{
     }
 
     public visitThread(thread: Thread): void {
-        console.log("=".repeat(thread.getThreadTitle().length + 16));
-        console.log("~~~ Thread: " + thread.getThreadTitle() + " ~~~");
-        console.log("=".repeat(thread.getThreadTitle().length + 16));
+        console.log(" " + "=".repeat(thread.getThreadTitle().length + 16));
+        console.log(" ~~~ Thread: " + thread.getThreadTitle() + " ~~~");
+        console.log(" " + "=".repeat(thread.getThreadTitle().length + 16));
     }
     
     public visitComment(comment: Comment): void {
-        console.log(comment.getDeveloperName() + ": " + comment.getCommentText());
+        console.log("  " + comment.getDeveloperName() + ": " + comment.getCommentText());
     }
 
     getId(): number {
