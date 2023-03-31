@@ -11,12 +11,16 @@ export class DoingItemState implements ItemState {
     }
 
     nextState(developers: Developer[]): void {
-        this.item.setState(this.item.getReadyForTestingItemState());
-        developers.forEach(developer => {
-            if(developer.getIsTester()) {
-                developer.getMessageService().sendMessage(developer.getName(), `Pls test item: ${this.item.getId()}`)
-            }
-        })
+        if(this.item.checkActivities()) {
+            this.item.setState(this.item.getReadyForTestingItemState());
+            developers.forEach(developer => {
+                if(developer.getIsTester()) {
+                    developer.getMessageService().sendMessage(developer.getName(), `Pls test item: ${this.item.getId()}`)
+                }
+            })
+        } else {
+            console.log("not all activities are done!");
+        }
     }
     
     testItem(isValidTest: boolean): void {

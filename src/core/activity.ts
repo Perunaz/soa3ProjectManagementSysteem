@@ -14,6 +14,10 @@ export class Activity {
         this.done = true;
     }
 
+    getDone(): boolean {
+        return this.done;
+    }
+
     getActivityId(): number { 
         return this.activityId;
     }

@@ -52,6 +52,19 @@ export class Item extends CompositeComponent{
         this._state.changeDeveloper(developerId, productOwner);
     }
 
+    public checkActivities(): boolean {
+        this.activities.forEach(activity => {
+            if(!activity.getDone()) {
+                return false;
+            }
+        });
+        return true;
+    }
+
+    public getActivities(): Activity[] {
+        return this.activities;
+    }
+
     public createActivity(activity: Activity): void {
         this.activities.push(activity);
     }
