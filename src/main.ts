@@ -14,6 +14,7 @@ import { ExportReportToPDF } from "./reportExportStrategy/exportReportToPDF";
 import { ReadyForTestingItemState } from "./states/itemStates/readyForTestingItemState";
 import { Developer } from "./users/developer";
 import { ProductOwner } from "./users/productOwner";
+import { CodeArchive } from "./core/codeArchive";
 
 let backlog = new Backlog();
 let sprintBacklog = new Backlog();
@@ -22,9 +23,9 @@ let messageService = new EmailService();
 let developers: Developer[] = [new Developer(1, "Caelan", false, messageService), new Developer(2, "Joep", false, messageService)];
 let productOwner = new ProductOwner(1, "Product Owner", messageService);
 let sprint = new Sprint("Sprint 1", new Date(), new Date(), backlog, sprintBacklog, pipeline);
+let main = new CodeArchive("Main");
 
-
-let projectManagement = new ProjectManagement(productOwner, developers);
+let projectManagement = new ProjectManagement(productOwner, developers, main);
 let project = new Project(projectManagement);
 
 let item = new Item(1, projectManagement.getDevelopers()[0].getId());

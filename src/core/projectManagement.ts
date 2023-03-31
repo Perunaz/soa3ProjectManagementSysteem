@@ -3,17 +3,21 @@ import { ReportExportStrategy } from "../reportExportStrategy/reportExportStrate
 import { Developer } from "../users/developer";
 import { ProductOwner } from "../users/productOwner";
 import { Backlog } from "./backlog";
+import { CodeArchive } from "./codeArchive";
 import { Sprint } from "./sprint";
 
 export class ProjectManagement {
     private sprints: Sprint[] = [];
     private productOwner: ProductOwner;
     private developers: Developer[];
+    private codeArchives: CodeArchive[];
 
-    constructor(productOwner: ProductOwner, developers: Developer[]) {
+    constructor(productOwner: ProductOwner, developers: Developer[], codeArchive: CodeArchive) {
         this.productOwner = productOwner;
         this.developers = developers
+        this.codeArchives = [codeArchive];
     }
+
     public addSprint(name: string,
         startDate: Date,
         endDate: Date,
@@ -35,5 +39,9 @@ export class ProjectManagement {
 
     public getDevelopers(): Developer[] {
         return this.developers;
+    }
+
+    getCodeArchive(): CodeArchive[] {
+        return this.codeArchives;
     }
 }
