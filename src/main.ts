@@ -41,6 +41,6 @@ item.acceptVisitor(projectManagement.getDevelopers()[0]);
 
 let discordService = new DiscordService();
 let emailService = new EmailService();
-let adapter = new MessengerAdapter(discordService);
+let adapter = MessengerAdapter.getInstance(discordService);
 
 sprint.exportReport(true);

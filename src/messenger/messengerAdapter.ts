@@ -4,7 +4,7 @@ export class MessengerAdapter {
   private static instance: MessengerAdapter;
   private messageService: MessageService;
 
-  constructor(adaptee: MessageService) {
+  private constructor(adaptee: MessageService) {
     this.messageService = adaptee;
   }
 
