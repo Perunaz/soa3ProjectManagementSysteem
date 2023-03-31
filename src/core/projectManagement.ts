@@ -18,26 +18,26 @@ export class ProjectManagement {
         this.codeArchives = [codeArchive];
     }
 
-    addSprint(name: string,
+    public addSprint(name: string,
         startDate: Date,
         endDate: Date,
         sprintBacklog: Backlog,
         productBacklog: Backlog,
-        pipeline: Pipeline) {
+        pipeline: Pipeline): void {
 
         let sprint = new Sprint(name, startDate, endDate, sprintBacklog, productBacklog, pipeline);
         this.sprints.push(sprint);
     }
 
-    getSprints(): Sprint[] {
+    public getSprints(): Sprint[] {
         return this.sprints
     }
 
-    getProductOwner(): ProductOwner {
+    public getProductOwner(): ProductOwner {
         return this.productOwner;
     }
 
-    getDevelopers(): Developer[] {
+    public getDevelopers(): Developer[] {
         return this.developers;
     }
 
