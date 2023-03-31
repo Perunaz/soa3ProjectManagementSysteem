@@ -11,8 +11,6 @@ export class DeveloperPipeline extends Pipeline{
     this.installPackages();
     this.buildCode();
     this.runTests();
-    this.deploy();
-    this.setReleased(true);
     console.log("Pipeline.release()");
 
     // Notificatie naar scrum master en product owner via messenger
