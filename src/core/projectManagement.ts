@@ -1,5 +1,4 @@
 import { Pipeline } from "../pipeline/pipeline";
-import { ReportExportStrategy } from "../reportExportStrategy/reportExportStrategy";
 import { Developer } from "../users/developer";
 import { ProductOwner } from "../users/productOwner";
 import { Backlog } from "./backlog";
@@ -23,11 +22,10 @@ export class ProjectManagement {
     public addSprint(name: string,
         startDate: Date,
         endDate: Date,
-        sprintBacklog: Backlog,
         pipeline: Pipeline,
         scrumMaster: Developer): void {
 
-        let sprint = new Sprint(name, startDate, endDate, sprintBacklog, this.productBacklog, pipeline, this.productOwner, scrumMaster);
+        let sprint = new Sprint(name, startDate, endDate, this.productBacklog, pipeline, this.productOwner, scrumMaster);
         this.sprints.push(sprint);
     }
 

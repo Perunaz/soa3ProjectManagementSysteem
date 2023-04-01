@@ -19,13 +19,12 @@ describe.each([
     new Date(2023, 4, 1),
     new Date(2023, 4, 7),
     new Backlog(),
-    new Backlog(),
     new DeveloperPipeline(),
     new ProductOwner(1, "John Doe", new EmailService()),
     new Developer(1, "Robert", true, new EmailService()),
     [new Developer(1, "Caelan", true, new EmailService), new Developer(2, "Joep", false, new EmailService)]
    ]
-])("Sprint", (name, startDate, endDate, backlog, sprintBacklog, pipeline, productOwner, scrumMaster, developers) => {
+])("Sprint", (name, startDate, endDate, backlog, pipeline, productOwner, scrumMaster, developers) => {
   let sprint: Sprint;
   let item: Item;
   
@@ -39,7 +38,6 @@ describe.each([
       startDate,
       endDate,
       backlog,
-      sprintBacklog,
       pipeline,
       productOwner,
       scrumMaster
