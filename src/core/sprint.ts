@@ -22,7 +22,7 @@ export class Sprint {
     private closedSprintState: SprintState;
 
     private _state: SprintState;
-    private sprintBacklog: Backlog;
+    private sprintBacklog: Backlog = new Backlog();
     private productBacklog: Backlog;
     private pipeline: Pipeline;
 
@@ -37,8 +37,7 @@ export class Sprint {
     constructor(
         name: string,
         startDate: Date, 
-        endDate: Date, 
-        sprintBacklog: Backlog, 
+        endDate: Date,
         productBacklog: Backlog,
         pipeline: Pipeline,
         productOwner: ProductOwner,
@@ -57,7 +56,6 @@ export class Sprint {
         this.closedSprintState = new ClosedSprintState(this, this.productOwner, this.scrumMaster);
 
         this._state = this.createdSprintState;
-        this.sprintBacklog = sprintBacklog;
         this.productBacklog = productBacklog;
         this.pipeline = pipeline;
 

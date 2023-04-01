@@ -1,9 +1,6 @@
 export abstract class Pipeline {
     private released: boolean = false;
 
-    constructor() {
-    }
-
     abstract build(): boolean;
 
     abstract installPackages(): void;

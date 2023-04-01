@@ -1,4 +1,3 @@
-import { Backlog } from "../../core/backlog";
 import { Sprint } from "../../core/sprint";
 import { Developer } from "../../users/developer";
 import { ProductOwner } from "../../users/productOwner";
