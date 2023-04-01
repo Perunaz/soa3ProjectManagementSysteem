@@ -53,6 +53,4 @@ describe.each([
         expect(codeArchive.getBranchName()).toBe("main");
         expect(codeArchive.pull()).toStrictEqual(['some code','more code']);
     });
-
-
 });

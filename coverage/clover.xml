@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1680364623391" clover="3.2.0">
-  <project timestamp="1680364623391" name="All files">
-    <metrics statements="331" coveredstatements="270" conditionals="29" coveredconditionals="18" methods="163" coveredmethods="119" elements="523" coveredelements="407" complexity="0" loc="331" ncloc="331" packages="8" files="32" classes="32"/>
+<coverage generated="1680366521179" clover="3.2.0">
+  <project timestamp="1680366521179" name="All files">
+    <metrics statements="351" coveredstatements="290" conditionals="31" coveredconditionals="20" methods="171" coveredmethods="127" elements="553" coveredelements="437" complexity="0" loc="351" ncloc="351" packages="8" files="36" classes="36"/>
     <package name="core">
       <metrics statements="135" coveredstatements="121" conditionals="10" coveredconditionals="8" methods="69" coveredmethods="57"/>
       <file name="activity.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\core\activity.ts">
@@ -205,11 +205,43 @@
       </file>
     </package>
     <package name="messenger">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="22" coveredstatements="22" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="9"/>
+      <file name="discordMessengerAdapter.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\messenger\discordMessengerAdapter.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+      <file name="discordService.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\messenger\discordService.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
       <file name="emailService.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\messenger\emailService.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+      </file>
+      <file name="whatsappMessengerAdapter.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\messenger\whatsappMessengerAdapter.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="14" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+      <file name="whatsappService.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\messenger\whatsappService.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
       </file>
     </package>
     <package name="pipeline">
