@@ -1,5 +1,4 @@
 import { EmailService } from "../messenger/emailService";
-import { MessageService } from "../messenger/messageService";
 import { User } from "./user";
 
 export class ProductOwner implements User{

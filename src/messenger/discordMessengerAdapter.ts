@@ -17,7 +17,7 @@ export class DiscordMessengerAdapter extends EmailService{
     return this.instance;
   }
 
-  sendMessage(name: string, body: string): void {
+  sendEmailMessage(name: string, body: string): void {
     this.messageService.sendDiscordMessage(name, body);
   }
 }

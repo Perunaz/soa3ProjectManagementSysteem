@@ -4,7 +4,7 @@ export abstract class Pipeline {
     constructor() {
     }
 
-    abstract build(): void;
+    abstract build(): boolean;
 
     abstract installPackages(): void;
 

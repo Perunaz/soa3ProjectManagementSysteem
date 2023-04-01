@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for users/productOwner.ts</title>
+    <title>Code coverage report for core/activity.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">users</a> productOwner.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">core</a> activity.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.71% </span>
+                <span class="strong">12.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/7</span>
+                <span class='fraction'>1/8</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.71% </span>
+                <span class="strong">12.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/7</span>
+                <span class='fraction'>1/8</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -86,20 +86,16 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -107,36 +103,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { EmailService } from "../messenger/emailService";
-import { User } from "./user";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export class Activity {
+    private developerId: number;
+    private description: string;
+    private <span class="cstat-no" title="statement not covered" >done: boolean = false;</span>
+    private activityId: number;
 &nbsp;
-export class ProductOwner implements User{
-    id: number;
-    name: string;
-    prefferedMessageService: EmailService;
-&nbsp;
-    constructor(id: number, name: string, messageService: EmailService) {
-        this.id = id
-        this.name = name;
-        this.prefferedMessageService = messageService;
-    }
-    
-<span class="fstat-no" title="function not covered" >    getId(</span>): number {
-<span class="cstat-no" title="statement not covered" >        return this.id;</span>
+<span class="fstat-no" title="function not covered" >    constructor(d</span>eveloperId: number, activityId: number, description: string) { 
+<span class="cstat-no" title="statement not covered" >        this.developerId = developerId;</span>
+<span class="cstat-no" title="statement not covered" >        this.activityId = activityId;</span>
+<span class="cstat-no" title="statement not covered" >        this.description = description;</span>
     }
 &nbsp;
-    getName(): string {
-        return this.name;
+    public <span class="fstat-no" title="function not covered" >markAsDone(</span>): void { 
+<span class="cstat-no" title="statement not covered" >        this.done = true;</span>
     }
 &nbsp;
-    getMessageService(): EmailService {
-        return this.prefferedMessageService;
+    public <span class="fstat-no" title="function not covered" >getDone(</span>): boolean {
+<span class="cstat-no" title="statement not covered" >        return this.done;</span>
+    }
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >getActivityId(</span>): number { 
+<span class="cstat-no" title="statement not covered" >        return this.activityId;</span>
     }
 }</pre></td></tr></table></pre>
 

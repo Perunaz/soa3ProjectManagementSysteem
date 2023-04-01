@@ -9,7 +9,7 @@ import { DeveloperPipeline } from "../src/pipeline/developerPipeline";
 import { EmailService } from "../src/messenger/emailService";
 import { Item } from "../src/core/item";
 import { describe } from '@jest/globals';
-import { MessengerAdapter } from "../src/messenger/discordMessengerAdapter";
+import { Developer } from "../src/users/developer";
  
 describe.each([
   [
@@ -20,9 +20,9 @@ describe.each([
     new Backlog(),
     new DeveloperPipeline(),
     new ProductOwner(1, "John Doe", new EmailService()),
-    MessengerAdapter.getInstance(new EmailService())
+    [new Developer(1, "Caelan", false, new EmailService()), new Developer(2, "Joep", false, new EmailService())]
   ]
-])("Sprint", (name, startDate, endDate, backlog, sprintBacklog, pipeline, productOwner) => {
+])("Sprint", (name, startDate, endDate, backlog, sprintBacklog, pipeline, productOwner, developers) => {
   let sprint: Sprint;
   let item: Item;
   
@@ -30,13 +30,17 @@ describe.each([
     backlog = new Backlog();
     pipeline = new DeveloperPipeline();
     productOwner = new ProductOwner(1, "John Doe", new EmailService());
+    developers = [new Developer(1, "Caelan", false, new EmailService()), new Developer(2, "Joep", false, new EmailService())];
     sprint = new Sprint(
       "Sprint1",
       new Date(2023, 4, 1),
       new Date(2023, 4, 7),
       backlog,
       backlog,
-      pipeline
+      pipeline,
+      productOwner,
+      developers,
+      developers[0]
     );
     item = new Item(3, 2);
   });
@@ -46,11 +50,11 @@ describe.each([
   }); 
   
   test("should be able to add items to the sprint backlog", () => {
-	const item = new Item(1,2);
-	backlog.addItem(item);
-  
-	sprint.addSprintBacklogItem(0);
-	expect(sprint.getSprintBacklog().getItem(0)).toBe(item);
+    const item = new Item(1,2);
+    backlog.addItem(item);
+    
+    sprint.addSprintBacklogItem(0);
+    expect(sprint.getSprintBacklog().getItem(0)).toBe(item);
   });
   
   test("should be able to edit the sprint details", () => {

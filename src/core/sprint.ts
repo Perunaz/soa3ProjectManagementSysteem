@@ -31,21 +31,33 @@ export class Sprint {
     private endDate: Date;
     private reportExportStrategy: ReportExportStrategy;
 
+    private productOwner: ProductOwner;
+    private developers: Developer[];
+    private scrumMaster: Developer;
+
     constructor(
         name: string,
         startDate: Date, 
         endDate: Date, 
         sprintBacklog: Backlog, 
         productBacklog: Backlog,
-        pipeline: Pipeline
+        pipeline: Pipeline,
+        productOwner: ProductOwner,
+        developers: Developer[],
+        scrumMaster: Developer
         ) 
     {
-        this.createdSprintState = new CreatedSprintState(this);
-        this.inProgressSprintState = new InProgressSprintState(this);
-        this.finishedSprintState = new FinishedSprintState(this);
-        this.reviewedSprintState = new ReviewedSprintState(this);
-        this.cancelledSprintState = new CancelledSprintState(this);
-        this.closedSprintState = new ClosedSprintState(this);
+
+        this.productOwner = productOwner;
+        this.developers = developers;
+        this.scrumMaster = scrumMaster;
+
+        this.createdSprintState = new CreatedSprintState(this, this.productOwner, this.scrumMaster);
+        this.inProgressSprintState = new InProgressSprintState(this, this.productOwner, this.scrumMaster);
+        this.finishedSprintState = new FinishedSprintState(this, this.productOwner, this.scrumMaster);
+        this.reviewedSprintState = new ReviewedSprintState(this, this.productOwner, this.scrumMaster);
+        this.cancelledSprintState = new CancelledSprintState(this, this.productOwner, this.scrumMaster);
+        this.closedSprintState = new ClosedSprintState(this, this.productOwner, this.scrumMaster);
 
         this._state = this.createdSprintState;
         this.sprintBacklog = sprintBacklog;

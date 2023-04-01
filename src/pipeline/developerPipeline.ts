@@ -6,15 +6,13 @@ export class DeveloperPipeline extends Pipeline{
         super();
     }
 
-  build(): void {
+  build(): boolean {
     console.log("Pipeline.build()");
     this.installPackages();
     this.buildCode();
     this.runTests();
     console.log("Pipeline.release()");
-
-    // Notificatie naar scrum master en product owner via messenger
-    console.log("Notifying Scrum Master and Product Owner of release");
+    return true;
   }
 
   installPackages(): void {

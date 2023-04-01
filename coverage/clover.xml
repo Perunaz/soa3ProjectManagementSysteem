@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1680336783725" clover="3.2.0">
-  <project timestamp="1680336783725" name="All files">
-    <metrics statements="228" coveredstatements="133" conditionals="26" coveredconditionals="3" methods="125" coveredmethods="52" elements="379" coveredelements="188" complexity="0" loc="228" ncloc="228" packages="8" files="24" classes="24"/>
+<coverage generated="1680346259478" clover="3.2.0">
+  <project timestamp="1680346259478" name="All files">
+    <metrics statements="272" coveredstatements="161" conditionals="28" coveredconditionals="5" methods="135" coveredmethods="55" elements="435" coveredelements="221" complexity="0" loc="272" ncloc="272" packages="8" files="26" classes="26"/>
     <package name="core">
-      <metrics statements="98" coveredstatements="65" conditionals="9" coveredconditionals="0" methods="50" coveredmethods="23"/>
+      <metrics statements="109" coveredstatements="70" conditionals="9" coveredconditionals="0" methods="54" coveredmethods="24"/>
+      <file name="activity.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\core\activity.ts">
+        <metrics statements="8" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+      </file>
       <file name="backlog.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\core\backlog.ts">
         <metrics statements="8" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="5" coveredmethods="4"/>
         <line num="4" count="1" type="stmt"/>
@@ -64,7 +75,7 @@
         <line num="129" count="0" type="stmt"/>
       </file>
       <file name="sprint.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\core\sprint.ts">
-        <metrics statements="45" coveredstatements="40" conditionals="2" coveredconditionals="0" methods="22" coveredmethods="18"/>
+        <metrics statements="48" coveredstatements="44" conditionals="2" coveredconditionals="0" methods="22" coveredmethods="19"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
@@ -74,13 +85,6 @@
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="43" count="4" type="stmt"/>
-        <line num="44" count="4" type="stmt"/>
-        <line num="45" count="4" type="stmt"/>
-        <line num="46" count="4" type="stmt"/>
-        <line num="47" count="4" type="stmt"/>
-        <line num="48" count="4" type="stmt"/>
-        <line num="50" count="4" type="stmt"/>
         <line num="51" count="4" type="stmt"/>
         <line num="52" count="4" type="stmt"/>
         <line num="53" count="4" type="stmt"/>
@@ -88,32 +92,42 @@
         <line num="56" count="4" type="stmt"/>
         <line num="57" count="4" type="stmt"/>
         <line num="58" count="4" type="stmt"/>
-        <line num="62" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
-        <line num="77" count="4" type="stmt"/>
-        <line num="81" count="4" type="stmt"/>
-        <line num="85" count="5" type="stmt"/>
-        <line num="89" count="0" type="stmt"/>
-        <line num="93" count="2" type="stmt"/>
-        <line num="97" count="1" type="stmt"/>
-        <line num="101" count="1" type="stmt"/>
-        <line num="105" count="0" type="stmt"/>
-        <line num="109" count="0" type="stmt"/>
-        <line num="113" count="3" type="stmt"/>
-        <line num="117" count="3" type="stmt"/>
+        <line num="59" count="4" type="stmt"/>
+        <line num="60" count="4" type="stmt"/>
+        <line num="62" count="4" type="stmt"/>
+        <line num="63" count="4" type="stmt"/>
+        <line num="64" count="4" type="stmt"/>
+        <line num="65" count="4" type="stmt"/>
+        <line num="67" count="4" type="stmt"/>
+        <line num="68" count="4" type="stmt"/>
+        <line num="69" count="4" type="stmt"/>
+        <line num="70" count="4" type="stmt"/>
+        <line num="74" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="89" count="4" type="stmt"/>
+        <line num="93" count="5" type="stmt"/>
+        <line num="97" count="6" type="stmt"/>
+        <line num="101" count="0" type="stmt"/>
+        <line num="105" count="2" type="stmt"/>
+        <line num="109" count="1" type="stmt"/>
+        <line num="113" count="1" type="stmt"/>
+        <line num="117" count="0" type="stmt"/>
         <line num="121" count="1" type="stmt"/>
-        <line num="125" count="1" type="stmt"/>
-        <line num="129" count="1" type="stmt"/>
+        <line num="125" count="3" type="stmt"/>
+        <line num="129" count="3" type="stmt"/>
         <line num="133" count="1" type="stmt"/>
         <line num="137" count="1" type="stmt"/>
         <line num="141" count="1" type="stmt"/>
-        <line num="145" count="2" type="stmt"/>
+        <line num="145" count="1" type="stmt"/>
+        <line num="149" count="1" type="stmt"/>
+        <line num="153" count="1" type="stmt"/>
+        <line num="157" count="3" type="stmt"/>
       </file>
     </package>
     <package name="itemThread">
-      <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="1"/>
+      <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="1"/>
       <file name="component.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\itemThread\component.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="1" type="stmt"/>
@@ -129,23 +143,17 @@
         <line num="21" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
       </file>
+      <file name="visitor.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\itemThread\visitor.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
     </package>
     <package name="messenger">
-      <metrics statements="9" coveredstatements="6" conditionals="1" coveredconditionals="1" methods="5" coveredmethods="2"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="emailService.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\messenger\emailService.ts">
-        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-      </file>
-      <file name="messengerAdapter.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\messenger\messengerAdapter.ts">
-        <metrics statements="7" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="2"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="12" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
       </file>
     </package>
     <package name="pipeline">
@@ -160,11 +168,11 @@
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
       </file>
       <file name="pipeline.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\pipeline\pipeline.ts">
         <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
@@ -252,78 +260,120 @@
       </file>
     </package>
     <package name="states.sprintState">
-      <metrics statements="41" coveredstatements="24" conditionals="7" coveredconditionals="2" methods="24" coveredmethods="12"/>
+      <metrics statements="56" coveredstatements="39" conditionals="10" coveredconditionals="5" methods="24" coveredmethods="12"/>
       <file name="cancelledSprintState.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\states\sprintState\cancelledSprintState.ts">
-        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
       </file>
       <file name="closedSprintState.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\states\sprintState\closedSprintState.ts">
-        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
+        <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
       </file>
       <file name="createdSprintState.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\states\sprintState\createdSprintState.ts">
-        <metrics statements="11" coveredstatements="8" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="4"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="18" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="21" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="24" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
+        <metrics statements="13" coveredstatements="10" conditionals="3" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="23" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
       </file>
       <file name="finishedSprintState.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\states\sprintState\finishedSprintState.ts">
-        <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="2"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="18" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <metrics statements="11" coveredstatements="8" conditionals="3" coveredconditionals="2" methods="4" coveredmethods="2"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
       </file>
       <file name="inProgressSprintState.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\states\sprintState\inProgressSprintState.ts">
-        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
       </file>
       <file name="reviewedSprintState.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\states\sprintState\reviewedSprintState.ts">
-        <metrics statements="7" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="2"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <metrics statements="11" coveredstatements="8" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="2"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
       </file>
     </package>
     <package name="users">
-      <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+      <metrics statements="31" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="4"/>
+      <file name="developer.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\users\developer.ts">
+        <metrics statements="24" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+      </file>
       <file name="productOwner.ts" path="C:\Users\Caela\source\repos\soa3ProjectManagementSysteem\src\users\productOwner.ts">
-        <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
         <line num="4" count="1" type="stmt"/>
         <line num="10" count="5" type="stmt"/>
         <line num="11" count="5" type="stmt"/>
         <line num="12" count="5" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
       </file>
     </package>
   </project>

@@ -27,12 +27,19 @@ let discordMessageService = DiscordMessengerAdapter.getInstance(discordService);
 let whatsappService = new WhatsappService();
 let whatsappMessageService  = WhatsappMessengerAdapter.getInstance(whatsappService);
 let developers: Developer[] = [new Developer(1, "Caelan", false, discordMessageService), new Developer(2, "Joep", false, emailMessageService)];
-let productOwner = new ProductOwner(1, "Product Owner", whatsappMessageService);
-let sprint = new Sprint("Sprint 1", new Date(), new Date(), backlog, sprintBacklog, pipeline);
+let productOwner = new ProductOwner(1, "Rob the Product Owner", whatsappMessageService);
+let scrumMaster = developers[0];
 let main = new CodeArchive("Main");
 
-let projectManagement = new ProjectManagement(productOwner, developers, main);
+let projectManagement = new ProjectManagement(productOwner, developers, main, backlog);
 let project = new Project(projectManagement);
+projectManagement.addSprint("sprint 1", new Date(), new Date(), sprintBacklog, pipeline, scrumMaster);
+let sprint = projectManagement.getSprints()[0];
+
+sprint.nextState();
+sprint.nextState();
+sprint.nextState();
+sprint.nextState();
 
 let item = new Item(1, projectManagement.getDevelopers()[0].getId());
 let itemThread1 = new Thread("is this really needed?");
@@ -43,7 +50,6 @@ let itemThread2 = new Thread("I need some help with this!");
 item.addComponent(itemThread2);
 itemThread2.addComponent(new Comment("I think I can help.", projectManagement.getDevelopers()[1].getName()));
 itemThread2.addComponent(new Comment("Nice!", projectManagement.getDevelopers()[0].getName()));
-
 item.acceptVisitor(projectManagement.getDevelopers()[0]);
 
 sprint.exportReport(true);

@@ -1,12 +1,18 @@
 import { Sprint } from "../../core/sprint";
+import { DeveloperPipeline } from "../../pipeline/developerPipeline";
+import { Developer } from "../../users/developer";
 import { ProductOwner } from "../../users/productOwner";
 import { SprintState } from "./sprintState";
 
 export class ReviewedSprintState implements SprintState {
     sprint: Sprint;
+    productOwner: ProductOwner;
+    scrumMaster: Developer;
 
-    constructor(_sprint: Sprint) {  
+    constructor(_sprint: Sprint, productOwner: ProductOwner, scrumMaster: Developer) {  
         this.sprint = _sprint;
+        this.productOwner = productOwner;
+        this.scrumMaster = scrumMaster;
     }
 
     addSprintBacklogItem(index: number): void {
@@ -15,11 +21,12 @@ export class ReviewedSprintState implements SprintState {
     editSprint(): void {
         console.log("can't edit sprint in this state");
     }
-    nextState(productOwner: ProductOwner): void {
-        if(this.sprint.getPipeline().isReleased()) {
+    nextState(): void {
+        if(this.sprint.getPipeline().isReleased() || this.sprint.getPipeline() instanceof DeveloperPipeline) {
+            this.productOwner.getMessageService().sendEmailMessage(this.productOwner.getName(), "Pipeline succeeded!")
             this.sprint.setState(this.sprint.getClosedSprintState());
         } else {
-            productOwner.getMessageService().sendEmailMessage(productOwner.getName(), "Pipeline failed to release")
+            this.productOwner.getMessageService().sendEmailMessage(this.productOwner.getName(), "Pipeline failed to release!")
         }
     }
 }

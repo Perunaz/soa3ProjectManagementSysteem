@@ -17,7 +17,7 @@ export class WhatsappMessengerAdapter extends EmailService{
     return this.instance;
   }
 
-  sendMessage(name: string, body: string): void {
+  sendEmailMessage(name: string, body: string): void {
     this.messageService.sendWhatsappMessage(name, body);
   }
 }

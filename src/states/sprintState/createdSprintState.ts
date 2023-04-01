@@ -1,12 +1,17 @@
 import { Sprint } from "../../core/sprint";
+import { Developer } from "../../users/developer";
 import { ProductOwner } from "../../users/productOwner";
 import { SprintState } from "./sprintState";
 
 export class CreatedSprintState implements SprintState {
     sprint: Sprint;
+    productOwner: ProductOwner;
+    scrumMaster: Developer;
 
-    constructor(_sprint: Sprint) {  
+    constructor(_sprint: Sprint, productOwner: ProductOwner, scrumMaster: Developer) {  
         this.sprint = _sprint;
+        this.productOwner = productOwner;
+        this.scrumMaster = scrumMaster;
     }
 
     addSprintBacklogItem(index: number): void {

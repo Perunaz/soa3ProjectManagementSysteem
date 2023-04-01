@@ -6,7 +6,7 @@ export class MainPipeline extends Pipeline {
         super();
     }
 
-  build(): void {
+  build(): boolean {
     console.log("Pipeline.build()");
     this.installPackages();
     this.buildCode();
@@ -14,9 +14,7 @@ export class MainPipeline extends Pipeline {
     this.deploy();
     this.setReleased(true);
     console.log("Pipeline.release()");
-
-    // Notificatie naar scrum master en product owner via messenger
-    console.log("Notifying Scrum Master and Product Owner of release");
+    return true;
   }
 
   installPackages(): void {
