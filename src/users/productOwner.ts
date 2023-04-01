@@ -1,12 +1,13 @@
+import { EmailService } from "../messenger/emailService";
 import { MessageService } from "../messenger/messageService";
 import { User } from "./user";
 
 export class ProductOwner implements User{
     id: number;
     name: string;
-    prefferedMessageService: MessageService;
+    prefferedMessageService: EmailService;
 
-    constructor(id: number, name: string, messageService: MessageService) {
+    constructor(id: number, name: string, messageService: EmailService) {
         this.id = id
         this.name = name;
         this.prefferedMessageService = messageService;
@@ -20,7 +21,7 @@ export class ProductOwner implements User{
         return this.name;
     }
 
-    getMessageService(): MessageService {
+    getMessageService(): EmailService {
         return this.prefferedMessageService;
     }
 }

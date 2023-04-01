@@ -15,7 +15,7 @@ export class DoingItemState implements ItemState {
             this.item.setState(this.item.getReadyForTestingItemState());
             developers.forEach(developer => {
                 if(developer.getIsTester()) {
-                    developer.getMessageService().sendMessage(developer.getName(), `Pls test item: ${this.item.getId()}`)
+                    developer.getMessageService().sendEmailMessage(developer.getName(), `Pls test item: ${this.item.getId()}`)
                 }
             })
         } else {
@@ -31,7 +31,7 @@ export class DoingItemState implements ItemState {
         this.item.setDeveloperId(developerId);
 
         if(productOwner !== undefined) {
-            productOwner.getMessageService().sendMessage(productOwner.getName(), "Pipeline failed to release")
+            productOwner.getMessageService().sendEmailMessage(productOwner.getName(), "Pipeline failed to release")
         }
     }
 }

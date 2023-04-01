@@ -5,15 +5,15 @@ import { Backlog } from "../core/backlog";
 import { Visitor } from "../itemThread/visitor";
 import { Thread } from "../itemThread/thread";
 import { Comment } from "../itemThread/comment";
-import { MessageService } from "../messenger/messageService";
+import { EmailService } from "../messenger/emailService";
 
 export class Developer extends Visitor implements User{
     id: number;
     name: string;
     isTester: boolean;
-    prefferedMessageService: MessageService;
+    prefferedMessageService: EmailService;
 
-    constructor(id: number, name: string, isTester: boolean, messageService: MessageService) {
+    constructor(id: number, name: string, isTester: boolean, messageService: EmailService) {
         super();
         this.id = id;
         this.name = name;
@@ -59,7 +59,7 @@ export class Developer extends Visitor implements User{
         return this.isTester
     }
 
-    getMessageService(): MessageService {
+    getMessageService(): EmailService {
         return this.prefferedMessageService;
     }
 }

@@ -19,7 +19,7 @@ export class ReviewedSprintState implements SprintState {
         if(this.sprint.getPipeline().isReleased()) {
             this.sprint.setState(this.sprint.getClosedSprintState());
         } else {
-            productOwner.getMessageService().sendMessage(productOwner.getName(), "Pipeline failed to release")
+            productOwner.getMessageService().sendEmailMessage(productOwner.getName(), "Pipeline failed to release")
         }
     }
 }

@@ -21,7 +21,7 @@ export class TodoItemState implements ItemState {
         this.item.setDeveloperId(developerId);
 
         if(productOwner !== undefined) {
-            productOwner.getMessageService().sendMessage(productOwner.getName(), "Pipeline failed to release")
+            productOwner.getMessageService().sendEmailMessage(productOwner.getName(), "Pipeline failed to release")
         }
     }
 }

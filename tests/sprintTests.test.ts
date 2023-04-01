@@ -9,7 +9,8 @@ import { DeveloperPipeline } from "../src/pipeline/developerPipeline";
 import { EmailService } from "../src/messenger/emailService";
 import { Item } from "../src/core/item";
 import { describe } from '@jest/globals';
-
+import { MessengerAdapter } from "../src/messenger/discordMessengerAdapter";
+ 
 describe.each([
   [
     "Sprint1",
@@ -18,7 +19,8 @@ describe.each([
     new Backlog(),
     new Backlog(),
     new DeveloperPipeline(),
-    new ProductOwner(1, "John Doe", new EmailService())
+    new ProductOwner(1, "John Doe", new EmailService()),
+    MessengerAdapter.getInstance(new EmailService())
   ]
 ])("Sprint", (name, startDate, endDate, backlog, sprintBacklog, pipeline, productOwner) => {
   let sprint: Sprint;
@@ -41,7 +43,7 @@ describe.each([
   
   test("should start in the Created state", () => {
     expect(sprint.getState().constructor.name).toBe("CreatedSprintState");
-  });
+  }); 
   
   test("should be able to add items to the sprint backlog", () => {
 	const item = new Item(1,2);

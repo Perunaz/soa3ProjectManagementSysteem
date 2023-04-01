@@ -1,11 +1,12 @@
+import { EmailService } from "../messenger/emailService";
 import { MessageService } from "../messenger/messageService";
 
 export interface User { 
     id: number;
     name: string;
-    prefferedMessageService: MessageService;
+    prefferedMessageService: EmailService;
 
     getId(): number;
     getName(): string;
-    getMessageService(): MessageService;
+    getMessageService(): EmailService;
 }

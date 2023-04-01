@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">47.5% </span>
+                <span class="strong">41.3% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/40</span>
+                <span class='fraction'>19/46</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">5% </span>
+                <span class="strong">4.34% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/20</span>
+                <span class='fraction'>1/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48.71% </span>
+                <span class="strong">42.22% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/39</span>
+                <span class='fraction'>19/45</span>
             </div>
         
             
@@ -179,7 +179,22 @@
 <a name='L114'></a><a href='#L114'>114</a>
 <a name='L115'></a><a href='#L115'>115</a>
 <a name='L116'></a><a href='#L116'>116</a>
-<a name='L117'></a><a href='#L117'>117</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -222,6 +237,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -337,16 +367,31 @@ export class Item extends CompositeComponent{
         this.developerId = developerId;
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    nextState(</span>developers?: Developer[]): void {
+    public <span class="fstat-no" title="function not covered" >nextState(</span>developers?: Developer[]): void {
 <span class="cstat-no" title="statement not covered" >        this._state.nextState(developers);</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    testItem(</span>isValidTest: boolean): void {
+    public <span class="fstat-no" title="function not covered" >testItem(</span>isValidTest: boolean): void {
 <span class="cstat-no" title="statement not covered" >        this._state.testItem(isValidTest);</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    changeDeveloper(</span>developerId: number, productOwner: ProductOwner): void {
+    public <span class="fstat-no" title="function not covered" >changeDeveloper(</span>developerId: number, productOwner: ProductOwner): void {
 <span class="cstat-no" title="statement not covered" >        this._state.changeDeveloper(developerId, productOwner);</span>
+    }
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >checkActivities(</span>): boolean {
+<span class="cstat-no" title="statement not covered" >        <span class="missing-if-branch" title="if path not taken" >I</span>if (this.activities.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            this.activities.forEach(<span class="fstat-no" title="function not covered" >activity </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                <span class="missing-if-branch" title="if path not taken" >I</span>if(!activity.getDone()) {</span>
+<span class="cstat-no" title="statement not covered" >                    return false;</span>
+                }
+            });
+        }
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+    }
+&nbsp;
+    public <span class="fstat-no" title="function not covered" >getActivities(</span>): Activity[] {
+<span class="cstat-no" title="statement not covered" >        return this.activities;</span>
     }
 &nbsp;
     public <span class="fstat-no" title="function not covered" >createActivity(</span>activity: Activity): void {
@@ -358,11 +403,11 @@ export class Item extends CompositeComponent{
 <span class="cstat-no" title="statement not covered" >        activityToFinish?.markAsDone();</span>
     }
 &nbsp;
-    public <span class="fstat-no" title="function not covered" >deleteActivity(</span>): void {
-<span class="cstat-no" title="statement not covered" >        throw new Error("Method not implemented.");</span>
+    public <span class="fstat-no" title="function not covered" >deleteActivity(</span>activityId: number): void {
+<span class="cstat-no" title="statement not covered" >        this.activities.slice(activityId, 1);</span>
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    acceptVisitor(</span>visitor: Visitor): void {
+    public <span class="fstat-no" title="function not covered" >acceptVisitor(</span>visitor: Visitor): void {
 <span class="cstat-no" title="statement not covered" >        visitor.visitItem(this);</span>
 <span class="cstat-no" title="statement not covered" >        super.acceptVisitor(visitor);</span>
     }
@@ -418,7 +463,7 @@ export class Item extends CompositeComponent{
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-03-25T20:04:55.296Z
+                at 2023-04-01T08:13:03.682Z
             </div>
         <script src="../prettify.js"></script>
         <script>

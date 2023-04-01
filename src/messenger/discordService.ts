@@ -1,8 +1,5 @@
-import { MessageService } from "./messageService";
-
-export class DiscordService implements MessageService {
-    sendMessage(name: string, body: string): void {
+export class DiscordService {
+    sendDiscordMessage(name: string, body: string): void {
         console.log(`Sending discord message to ${name}: ${body}`);
     }
-
 }
