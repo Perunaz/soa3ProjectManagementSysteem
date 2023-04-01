@@ -81,8 +81,8 @@ export class Item extends CompositeComponent{
         activityToFinish?.markAsDone();
     }
 
-    public deleteActivity(activityId: number): void {
-        this.activities.slice(activityId, 1);
+    public deleteActivity(activityId: number): Activity[] {
+        return this.activities.slice(activityId, 1);
     }
 
     public acceptVisitor(visitor: Visitor): void {
