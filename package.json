@@ -4,8 +4,7 @@
   "description": "Eindopdracht Softwareontwerp & -architectuur 3",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./src/main.ts",
-    "test": "jest --coverage"
+    "test": "jest ./tests --coverage"
   },
   "repository": {
     "type": "git",
