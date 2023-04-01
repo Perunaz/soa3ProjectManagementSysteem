@@ -1,25 +1,37 @@
 import { Sprint } from "../../core/sprint";
+import { Developer } from "../../users/developer";
+import { ProductOwner } from "../../users/productOwner";
 import { SprintState } from "./sprintState";
 
 export class CreatedSprintState implements SprintState {
-    isReviewable: boolean;
     sprint: Sprint;
+    productOwner: ProductOwner;
+    scrumMaster: Developer;
 
-    constructor(_sprint: Sprint) {  
+    constructor(_sprint: Sprint, productOwner: ProductOwner, scrumMaster: Developer) {  
         this.sprint = _sprint;
-        this.isReviewable = false;
+        this.productOwner = productOwner;
+        this.scrumMaster = scrumMaster;
     }
 
-    addSprint(): void {
-        throw new Error("Method not implemented.");
+    addSprintBacklogItem(index: number): void {
+        let itemToAdd = this.sprint.getProductBacklog().getItem(index);
+        this.sprint.getSprintBacklog().addItem(itemToAdd)
     }
-    removeSprint(): void {
-        throw new Error("Method not implemented.");
+
+    editSprint(name?: string, startDate?: Date, endDate?: Date): void {
+        if(name) {
+            this.sprint.setName(name);
+        }
+        if(startDate) {
+            this.sprint.setStartDate(startDate);
+        }
+        if(endDate) { 
+            this.sprint.setEndDate(endDate);
+        }
     }
-    editSprint(): void {
-        throw new Error("Method not implemented.");
-    }
-    deleteSprint(): void {
-        throw new Error("Method not implemented.");
+
+    nextState(): void {
+        this.sprint.setState(this.sprint.getInProgressSprintState());
     }
 }

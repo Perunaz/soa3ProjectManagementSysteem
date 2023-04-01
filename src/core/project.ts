@@ -7,7 +7,7 @@ export class Project {
         this.projectManagement = projectManagement;
     }
 
-    getprojectManagement(): ProjectManagement { 
+    getProjectManagement(): ProjectManagement { 
         return this.projectManagement;
     }
 }

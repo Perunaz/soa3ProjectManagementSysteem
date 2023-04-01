@@ -1,28 +1,24 @@
 import { Item } from "../../core/item";
+import { Developer } from "../../users/developer";
+import { ProductOwner } from "../../users/productOwner";
 import { ItemState } from "./itemState";
 
 export class DoneItemState implements ItemState {
-    isReviewable: boolean;
     item: Item;
 
-    constructor(item: Item) {  
+    constructor(item: Item) {
         this.item = item;
-        this.isReviewable = false
     }
 
-    addItem(): void {
-        throw new Error("Method not implemented.");
+    nextState(): void {
+        console.log("Item is already done!");
     }
 
-    removeItem(): void {
-        throw new Error("Method not implemented.");
+    testItem(isValidTest: boolean, scrumMaster: Developer): void {
+        console.log("Item is already tested");
     }
-
-    editItem(): void {
-        throw new Error("Method not implemented.");
-    }
-
-    deleteItem(): void {
-        throw new Error("Method not implemented.");
+    
+    changeDeveloper(developerId: number, productOwner: ProductOwner): void {
+        console.log("Item is already done!");
     }
 }

@@ -1,4 +1,4 @@
-import { Visitor } from "./Visitor";
+import { Visitor } from "./visitor";
 
 export abstract class Component
 {

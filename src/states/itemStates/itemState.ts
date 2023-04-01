@@ -1,11 +1,11 @@
 import { Item } from "../../core/item";
+import { Developer } from "../../users/developer";
+import { ProductOwner } from "../../users/productOwner";
 
 export interface ItemState {
-    isReviewable: boolean;
     item: Item;
 
-    addItem(): void;
-    removeItem(): void;
-    editItem(): void;
-    deleteItem(): void;
+    nextState(developers?: Developer[], scrumMaster?: Developer): void;
+    testItem(isValidTest: boolean, scrumMaster?: Developer): void;
+    changeDeveloper(developerId: number, productOwner: ProductOwner): void;
 }

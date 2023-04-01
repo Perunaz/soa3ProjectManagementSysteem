@@ -1,28 +1,28 @@
 import { Item } from "../../core/item";
+import { Developer } from "../../users/developer";
+import { ProductOwner } from "../../users/productOwner";
 import { ItemState } from "./itemState";
 
 export class TodoItemState implements ItemState {
-    isReviewable: boolean;
     item: Item;
 
-    constructor(item: Item) {  
+    constructor(item: Item) {
         this.item = item;
-        this.isReviewable = false
     }
 
-    addItem(): void {
-        throw new Error("Method not implemented.");
+    nextState(): void {
+        this.item.setState(this.item.getDoingItemState());
+    }
+    
+    testItem(isValidTest: boolean, scrumMaster: Developer): void {
+        console.log("can't test right now");
     }
 
-    removeItem(): void {
-        throw new Error("Method not implemented.");
-    }
+    changeDeveloper(developerId: number, productOwner: ProductOwner): void {
+        this.item.setDeveloperId(developerId);
 
-    editItem(): void {
-        throw new Error("Method not implemented.");
-    }
-
-    deleteItem(): void {
-        throw new Error("Method not implemented.");
+        if(productOwner !== undefined) {
+            productOwner.getMessageService().sendEmailMessage(productOwner.getName(), "Pipeline failed to release")
+        }
     }
 }

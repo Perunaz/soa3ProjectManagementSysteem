@@ -1,14 +1,16 @@
+import { Backlog } from "../../core/backlog";
 import { Sprint } from "../../core/sprint";
+import { Developer } from "../../users/developer";
+import { ProductOwner } from "../../users/productOwner";
 
 export interface SprintState {
-    isReviewable: boolean;
     sprint: Sprint;
+    productOwner: ProductOwner;
+    scrumMaster: Developer;
 
-    addSprint(): void;
+    addSprintBacklogItem(index: number): void;
 
-    removeSprint(): void;
+    editSprint(name?: string, startDate?: Date, endDate?: Date): void;
 
-    editSprint(): void;
-
-    deleteSprint(): void;
+    nextState(): void;
 }

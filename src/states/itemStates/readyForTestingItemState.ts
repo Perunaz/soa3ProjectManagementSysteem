@@ -1,28 +1,24 @@
 import { Item } from "../../core/item";
+import { Developer } from "../../users/developer";
+import { ProductOwner } from "../../users/productOwner";
 import { ItemState } from "./itemState";
 
 export class ReadyForTestingItemState implements ItemState {
-    isReviewable: boolean;
     item: Item;
 
-    constructor(item: Item) {  
+    constructor(item: Item) {
         this.item = item;
-        this.isReviewable = false
     }
 
-    addItem(): void {
-        throw new Error("Method not implemented.");
+    nextState(): void {
+        this.item.setState(this.item.getTestingItemState());
     }
-
-    removeItem(): void {
-        throw new Error("Method not implemented.");
+    
+    testItem(isValidTest: boolean, scrumMaster: Developer): void {
+        console.log("can't test right now");
     }
-
-    editItem(): void {
-        throw new Error("Method not implemented.");
-    }
-
-    deleteItem(): void {
-        throw new Error("Method not implemented.");
+    
+    changeDeveloper(developerId: number, productOwner: ProductOwner): void {
+        console.log("can't change after finishing item");
     }
 }

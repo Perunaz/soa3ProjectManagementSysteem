@@ -1,22 +1,22 @@
 import { Component } from "./component";
-import { Visitor } from "./Visitor";
+import { Visitor } from "./visitor";
 
 export class Comment extends Component {
     private commentText: string;
-    private visitorId: number;
+    private developerName: string;
 
-    constructor(commentText: string, visitorId: number) {
+    constructor(commentText: string, developerName: string) {
         super();
         this.commentText = commentText;
-        this.visitorId = visitorId;
+        this.developerName = developerName;
     }
 
     getCommentText(): string {
         return this.commentText;
     }
 
-    getVisitorId(): number {
-        return this.visitorId;
+    getDeveloperName(): string {
+        return this.developerName;
     }
 
     acceptVisitor(visitor: Visitor): void {

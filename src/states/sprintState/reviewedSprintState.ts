@@ -1,25 +1,32 @@
 import { Sprint } from "../../core/sprint";
+import { DeveloperPipeline } from "../../pipeline/developerPipeline";
+import { Developer } from "../../users/developer";
+import { ProductOwner } from "../../users/productOwner";
 import { SprintState } from "./sprintState";
 
 export class ReviewedSprintState implements SprintState {
-    isReviewable: boolean;
     sprint: Sprint;
+    productOwner: ProductOwner;
+    scrumMaster: Developer;
 
-    constructor(_sprint: Sprint) {  
+    constructor(_sprint: Sprint, productOwner: ProductOwner, scrumMaster: Developer) {  
         this.sprint = _sprint;
-        this.isReviewable = false;
+        this.productOwner = productOwner;
+        this.scrumMaster = scrumMaster;
     }
 
-    addSprint(): void {
-        throw new Error("Method not implemented.");
-    }
-    removeSprint(): void {
-        throw new Error("Method not implemented.");
+    addSprintBacklogItem(index: number): void {
+        console.log("can't add items to sprint backlog in this state");
     }
     editSprint(): void {
-        throw new Error("Method not implemented.");
+        console.log("can't edit sprint in this state");
     }
-    deleteSprint(): void {
-        throw new Error("Method not implemented.");
+    nextState(): void {
+        if(this.sprint.getPipeline().isReleased() || this.sprint.getPipeline() instanceof DeveloperPipeline) {
+            this.productOwner.getMessageService().sendEmailMessage(this.productOwner.getName(), "Pipeline succeeded!")
+            this.sprint.setState(this.sprint.getClosedSprintState());
+        } else {
+            this.productOwner.getMessageService().sendEmailMessage(this.productOwner.getName(), "Pipeline failed to release!")
+        }
     }
 }

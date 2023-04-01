@@ -1,9 +1,24 @@
 export abstract class Pipeline {
-    public build(): void {
-        this.build();
+    private released: boolean = false;
+
+    constructor() {
     }
 
-    public finish(): void {
-        this.finish();
+    abstract build(): boolean;
+
+    abstract installPackages(): void;
+
+    abstract buildCode(): void;
+
+    abstract runTests(): void;
+
+    abstract deploy(): void;
+    
+    isReleased(): boolean {
+        return this.released;
     }
-}
+
+    setReleased(value: boolean): void {
+        this.released = value;
+      }
+  }
