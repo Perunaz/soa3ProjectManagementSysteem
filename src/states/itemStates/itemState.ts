@@ -5,7 +5,7 @@ import { ProductOwner } from "../../users/productOwner";
 export interface ItemState {
     item: Item;
 
-    nextState(developers?: Developer[]): void;
-    testItem(isValidTest: boolean): void;
+    nextState(developers?: Developer[], scrumMaster?: Developer): void;
+    testItem(isValidTest: boolean, scrumMaster?: Developer): void;
     changeDeveloper(developerId: number, productOwner: ProductOwner): void;
 }

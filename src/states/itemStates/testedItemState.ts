@@ -1,4 +1,5 @@
 import { Item } from "../../core/item";
+import { Developer } from "../../users/developer";
 import { ProductOwner } from "../../users/productOwner";
 import { ItemState } from "./itemState";
 
@@ -13,10 +14,11 @@ export class TestedItemState implements ItemState {
         console.log("Item still needs to be tested for a second time");
     }
     
-    testItem(isValidTest: boolean): void {
+    testItem(isValidTest: boolean, scrumMaster: Developer): void {
         if(isValidTest) {
             this.item.setState(this.item.getDoneItemState());
         } else {
+            scrumMaster.getMessageService().sendEmailMessage(scrumMaster.getName(), "Item back to ToDo state!")
             this.item.setState(this.item.getToDoItemState());
         }
     }

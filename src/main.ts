@@ -41,7 +41,7 @@ sprint.nextState();
 sprint.nextState();
 sprint.nextState();
 
-let item = new Item(1, projectManagement.getDevelopers()[0].getId());
+let item = new Item(1, projectManagement.getDevelopers()[0].getId(), "make template");
 let itemThread1 = new Thread("is this really needed?");
 item.addComponent(itemThread1);
 itemThread1.addComponent(new Comment("I think so yes!", projectManagement.getDevelopers()[0].getName()));

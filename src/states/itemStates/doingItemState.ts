@@ -10,7 +10,7 @@ export class DoingItemState implements ItemState {
         this.item = item;
     }
 
-    nextState(developers: Developer[]): void {
+    nextState(developers: Developer[], scrumMaster: Developer): void {
         if(this.item.checkActivities()) {
             this.item.setState(this.item.getReadyForTestingItemState());
             developers.forEach(developer => {
@@ -19,11 +19,12 @@ export class DoingItemState implements ItemState {
                 }
             })
         } else {
+            scrumMaster.getMessageService().sendEmailMessage(scrumMaster.getName(), "Item back to ToDo state!")
             this.item.setState(this.item.getToDoItemState());
         }
     }
     
-    testItem(isValidTest: boolean): void {
+    testItem(isValidTest: boolean, scrumMaster: Developer): void {
         console.log("can't test right now");
     }
     

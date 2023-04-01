@@ -1,4 +1,5 @@
 import { Item } from "../../core/item";
+import { Developer } from "../../users/developer";
 import { ProductOwner } from "../../users/productOwner";
 import { ItemState } from "./itemState";
 
@@ -13,7 +14,7 @@ export class DoneItemState implements ItemState {
         console.log("Item is already done!");
     }
 
-    testItem(isValidTest: boolean): void {
+    testItem(isValidTest: boolean, scrumMaster: Developer): void {
         console.log("Item is already tested");
     }
     

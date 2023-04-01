@@ -23,9 +23,10 @@ export class Item extends CompositeComponent{
 
     private id: number;
     private developerId: number;
+    private description: string;
     private activities: Activity[] = [];
 
-    constructor(id: number, developerId: number) {
+    constructor(id: number, developerId: number, description: string) {
         super();
         this.todoItemState = new TodoItemState(this);
         this.doingItemState = new DoingItemState(this);
@@ -38,14 +39,15 @@ export class Item extends CompositeComponent{
 
         this.id = id;
         this.developerId = developerId;
+        this.description = description;
     }
 
-    public nextState(developers?: Developer[]): void {
-        this._state.nextState(developers);
+    public nextState(developers: Developer[], scrumMaster: Developer): void {
+        this._state.nextState(developers, scrumMaster);
     }
 
-    public testItem(isValidTest: boolean): void {
-        this._state.testItem(isValidTest);
+    public testItem(isValidTest: boolean, scrumMaster: Developer): void {
+        this._state.testItem(isValidTest, scrumMaster);
     }
 
     public changeDeveloper(developerId: number, productOwner: ProductOwner): void {
@@ -54,13 +56,16 @@ export class Item extends CompositeComponent{
 
     public checkActivities(): boolean {
         if (this.activities.length > 0) {
+            let allDone = true;
             this.activities.forEach(activity => {
                 if(!activity.getDone()) {
-                    return false;
+                    allDone = false;
                 }
             });
+            return allDone;
+        } else {
+            return true;
         }
-        return true;
     }
 
     public getActivities(): Activity[] {
@@ -127,5 +132,9 @@ export class Item extends CompositeComponent{
 
     public getId(): number {
         return this.id;
+    }
+
+    public getDescription(): string { 
+        return this.description;
     }
 }

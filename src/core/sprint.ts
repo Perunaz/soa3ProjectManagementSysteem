@@ -32,7 +32,6 @@ export class Sprint {
     private reportExportStrategy: ReportExportStrategy;
 
     private productOwner: ProductOwner;
-    private developers: Developer[];
     private scrumMaster: Developer;
 
     constructor(
@@ -43,13 +42,11 @@ export class Sprint {
         productBacklog: Backlog,
         pipeline: Pipeline,
         productOwner: ProductOwner,
-        developers: Developer[],
         scrumMaster: Developer
         ) 
     {
 
         this.productOwner = productOwner;
-        this.developers = developers;
         this.scrumMaster = scrumMaster;
 
         this.createdSprintState = new CreatedSprintState(this, this.productOwner, this.scrumMaster);

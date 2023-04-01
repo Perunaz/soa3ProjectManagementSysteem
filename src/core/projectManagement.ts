@@ -27,7 +27,7 @@ export class ProjectManagement {
         pipeline: Pipeline,
         scrumMaster: Developer): void {
 
-        let sprint = new Sprint(name, startDate, endDate, sprintBacklog, this.productBacklog, pipeline, this.productOwner, this.developers, scrumMaster);
+        let sprint = new Sprint(name, startDate, endDate, sprintBacklog, this.productBacklog, pipeline, this.productOwner, scrumMaster);
         this.sprints.push(sprint);
     }
 
@@ -47,7 +47,7 @@ export class ProjectManagement {
         return this.productBacklog;
     }
 
-    getCodeArchive(): CodeArchive[] {
+    getCodeArchives(): CodeArchive[] {
         return this.codeArchives;
     }
 }

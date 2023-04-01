@@ -21,8 +21,8 @@ export class Developer extends Visitor implements User{
         this.prefferedMessageService = messageService;
     }
 
-    public createItem(backlog: Backlog, id: number) {
-        let item = new Item(id, this.id);
+    public createItem(backlog: Backlog, id: number, description: string) {
+        let item = new Item(id, this.id, description);
         backlog.addItem(item);
     }
 
@@ -32,9 +32,9 @@ export class Developer extends Visitor implements User{
     }
 
     public visitItem(item: Item): void {
-        console.log("=".repeat(item.getId().toString().length + 14));
-        console.log("~~~ Item: " + item.getId() + " ~~~");
-        console.log("=".repeat(item.getId().toString().length + 14));
+        console.log("=".repeat(item.getDescription().length + 14));
+        console.log("~~~ Item: " + item.getDescription() + " ~~~");
+        console.log("=".repeat(item.getDescription().length + 14));
     }
 
     public visitThread(thread: Thread): void {
