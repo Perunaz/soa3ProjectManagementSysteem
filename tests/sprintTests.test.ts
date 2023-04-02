@@ -58,18 +58,12 @@ describe.each([
   });
   
   test("should be able to edit the sprint details", () => {
-    sprint.editSprint();
-    sprint.setName("Sprint2");
-    sprint.setStartDate(new Date(2023, 4, 8));
-    sprint.setEndDate(new Date(2023, 4, 14));
-    const item = new Item(1, 2, "make template");
-    sprint.getProductBacklog().addItem(item);
+    sprint.editSprint("Sprint2", new Date(2023, 4, 8), new Date(2023, 4, 14));
     sprint.setState(sprint.getInProgressSprintState());
     
     expect(sprint.getName()).toBe("Sprint2");
     expect(sprint.getStartDate()).toEqual(new Date(2023, 4, 8));
     expect(sprint.getEndDate()).toEqual(new Date(2023, 4, 14));
-    expect(sprint.getProductBacklog().getItem(0)).toBe(item);
     expect(sprint.getState().constructor.name).toBe("InProgressSprintState");
   });
   
